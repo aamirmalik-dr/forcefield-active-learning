@@ -17,7 +17,8 @@ training settings, from the same initial draw.
 
 The measured answer is not the one active-learning papers usually lead
 with, and that is the point of this note: **on a well-mixed candidate pool,
-random selection beat query-by-committee at every budget**, by 6 percent on
+random selection beat query-by-committee at every budget past the shared
+initial draw**, by 6 percent on
 forces and 56 percent on energies at 300 labels, even though the committee's
 uncertainty signal ranks actual error almost perfectly (Spearman rho 0.87
 to 0.91). On a redundancy-heavy pool where informative frames are rare, the
@@ -87,7 +88,7 @@ the machine-readable one).
   reverses (scarce pool) measured rather than asserted, and with reduced
   seed counts stated wherever they apply (scarce: 2, exploration: 1).
 - Calibration is reported per seed, including the 2x overconfidence.
-- The equation-of-state check (below, RESULTS.md) compares the active
+- The equation-of-state check (RESULTS.md) compares the active
   committee against a random-reference committee at the identical budget,
   the teacher, and real-DFT Materials Project anchors, so the physics cost
   of acquisition bias is measured, not guessed.
@@ -133,7 +134,7 @@ Full reproduction (installs nothing extra except the teacher):
 
 ```
 pip install -e ".[teacher,mp]"
-python scripts/run_all.py        # ~3 h on a desktop CPU
+python scripts/run_all.py        # ~6 h on a desktop CPU (timings in RESULTS.md)
 ```
 
 Tests and lint:

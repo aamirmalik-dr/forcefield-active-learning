@@ -5,7 +5,8 @@ Order: teacher choice, dataset generation and labeling, DFT anchor fetch
 MD-exploration variant, the EOS and NVE physics checks, the committed sample
 carve, metrics aggregation, figures, and the executed tutorial notebook.
 
-Roughly 3 hours on a desktop CPU, dominated by committee retraining.
+Roughly 6 hours on a desktop CPU, dominated by committee retraining
+(measured stage times are in RESULTS.md).
 
 Usage:
     python scripts/run_all.py [--skip-generate]
