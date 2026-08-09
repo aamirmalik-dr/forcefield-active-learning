@@ -1,0 +1,9261 @@
+{
+ "config": {
+  "name": "ceiling",
+  "kind": "al",
+  "dataset": "data/full/dataset.extxyz",
+  "seeds": [
+   0
+  ],
+  "strategies": [
+   "random"
+  ],
+  "n_members": 5,
+  "hidden": [
+   16,
+   16
+  ],
+  "n_init": 1056,
+  "round_size": 0,
+  "n_rounds": 0,
+  "chunk_size": 48,
+  "train": {
+   "epochs": 40,
+   "batch_size": 16,
+   "lr": 0.003,
+   "force_weight": 0.1,
+   "target_frame_epochs": 12000,
+   "max_epochs": 120
+  },
+  "split": {
+   "holdout_compositions": [
+    "Ti2ZrNb",
+    "TiZrNb2"
+   ],
+   "test_fraction": 0.2,
+   "seed": 20260809
+  },
+  "out": "results/ceiling.json"
+ },
+ "n_pool": 1056,
+ "n_test": 288,
+ "n_transfer": 144,
+ "pool_kind_fractions": {
+  "rattle04": 0.16666666666666666,
+  "rattle08": 0.16666666666666666,
+  "rattle14": 0.16666666666666666,
+  "rattle20": 0.16666666666666666,
+  "rattle28": 0.16666666666666666,
+  "strain_shear": 0.08333333333333333,
+  "strain_vol": 0.08333333333333333
+ },
+ "pool_composition_fractions": {
+  "Nb": 0.15151515151515152,
+  "Ti": 0.13636363636363635,
+  "TiNb": 0.14393939393939395,
+  "TiZr": 0.09090909090909091,
+  "TiZrNb": 0.15151515151515152,
+  "Zr": 0.1590909090909091,
+  "ZrNb": 0.16666666666666666
+ },
+ "runs": [
+  {
+   "settings": {
+    "strategy": "random",
+    "n_members": 5,
+    "hidden": [
+     16,
+     16
+    ],
+    "n_init": 1056,
+    "round_size": 0,
+    "n_rounds": 0,
+    "seed": 0,
+    "train": {
+     "epochs": 40,
+     "batch_size": 16,
+     "lr": 0.003,
+     "force_weight": 0.1,
+     "lr_min_factor": 0.05,
+     "seed": 0,
+     "target_frame_epochs": 12000,
+     "max_epochs": 120
+    },
+    "explore": false,
+    "group_cap": 4
+   },
+   "rounds": [
+    {
+     "round": 0,
+     "budget": 1056,
+     "train_seconds": 666.9103621999966,
+     "member_final_losses": [
+      0.00970675182765104,
+      0.00901768365990441,
+      0.010267722616487377,
+      0.01040355964205654,
+      0.010029061232184703
+     ],
+     "epochs_used": 40,
+     "metrics": {
+      "test": {
+       "e_mae_mev_per_atom": 13.13244429157284,
+       "e_rmse_mev_per_atom": 42.95898207415541,
+       "f_mae_mev_per_a": 140.9597026040293,
+       "f_rmse_mev_per_a": 720.569427423262,
+       "n_structures": 288
+      },
+      "transfer": {
+       "e_mae_mev_per_atom": 30.64815427201008,
+       "e_rmse_mev_per_atom": 38.5164856186458,
+       "f_mae_mev_per_a": 206.46700118579315,
+       "f_rmse_mev_per_a": 458.96470455563986,
+       "n_structures": 144
+      }
+     },
+     "eval_seconds": 2.56242529998417
+    }
+   ],
+   "initial_purchase": [
+    {
+     "index": 659,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 654,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 969,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 364,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 90,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 864,
+     "group": "ZrNb_strain_vol_b0",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 450,
+     "group": "Nb_strain_vol_b0",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 178,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 356,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 358,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 816,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 786,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 330,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 874,
+     "group": "ZrNb_strain_vol_b0",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 361,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 865,
+     "group": "ZrNb_strain_shear_b0",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 108,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 769,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 145,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 913,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 849,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 898,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 623,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 625,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 416,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 349,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 415,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 396,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 159,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 752,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 986,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 1009,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 60,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 800,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 727,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 669,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 579,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 857,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 638,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 1025,
+     "group": "TiZrNb_strain_shear_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 310,
+     "group": "Zr_strain_vol_b1",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 11,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 121,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 264,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 400,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 586,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 695,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 770,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 487,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 861,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 111,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 352,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 390,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 62,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 9,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 59,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 597,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 16,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 36,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 291,
+     "group": "Zr_strain_shear_b0",
+     "composition": "Zr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 254,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 896,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 1,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 845,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 332,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 1033,
+     "group": "TiZrNb_strain_shear_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 24,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 109,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 505,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 141,
+     "group": "Ti_strain_shear_b1",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 247,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 806,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 596,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 706,
+     "group": "TiNb_strain_vol_b0",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 31,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 304,
+     "group": "Zr_strain_vol_b1",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 759,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 609,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 407,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 282,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 735,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 398,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 478,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 190,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 1017,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 530,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 249,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 222,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 30,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 230,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 687,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 777,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 521,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 1001,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 924,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 708,
+     "group": "TiNb_strain_vol_b0",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 568,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 331,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 76,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 286,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 343,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 225,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 647,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 334,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 250,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 15,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 221,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 374,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 337,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 339,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 58,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 911,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 877,
+     "group": "ZrNb_strain_shear_b0",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 156,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 616,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 830,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 294,
+     "group": "Zr_strain_vol_b0",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 198,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 47,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 1046,
+     "group": "TiZrNb_strain_vol_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 464,
+     "group": "Nb_strain_vol_b1",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 48,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 92,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 725,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 676,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 932,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 257,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 740,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 843,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 186,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 773,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 523,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 474,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 593,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 529,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 678,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 288,
+     "group": "Zr_strain_vol_b0",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 528,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 789,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 193,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 174,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 788,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 169,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 301,
+     "group": "Zr_strain_shear_b0",
+     "composition": "Zr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 42,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 87,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 232,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 295,
+     "group": "Zr_strain_shear_b0",
+     "composition": "Zr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 260,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 1019,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 502,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 886,
+     "group": "ZrNb_strain_vol_b1",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 43,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 267,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 683,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 507,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 497,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 541,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 132,
+     "group": "Ti_strain_shear_b0",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 369,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 192,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 269,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 496,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 408,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 859,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 981,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 866,
+     "group": "ZrNb_strain_vol_b0",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 936,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 231,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 101,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 922,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 289,
+     "group": "Zr_strain_shear_b0",
+     "composition": "Zr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 968,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 194,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 8,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 359,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 98,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 468,
+     "group": "Nb_strain_vol_b1",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 451,
+     "group": "Nb_strain_shear_b0",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 689,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 919,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 852,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 978,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 233,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 887,
+     "group": "ZrNb_strain_shear_b1",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 81,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 732,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 317,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 312,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 938,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 582,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 241,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 122,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 79,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 665,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 237,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 893,
+     "group": "ZrNb_strain_shear_b1",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 155,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 1052,
+     "group": "TiZrNb_strain_vol_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 27,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 1008,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 402,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 166,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 643,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 738,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 767,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 749,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 682,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 558,
+     "group": "TiZr_strain_vol_b0",
+     "composition": "TiZr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 99,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 923,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 144,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 578,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 229,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 550,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 899,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 126,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 503,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 677,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 131,
+     "group": "Ti_strain_shear_b0",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 14,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 853,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 135,
+     "group": "Ti_strain_shear_b0",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 771,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 914,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 326,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 422,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 650,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 248,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 489,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 323,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 185,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 723,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 546,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 259,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 766,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 970,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 378,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 973,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 103,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 977,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 179,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 729,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 562,
+     "group": "TiZr_strain_vol_b0",
+     "composition": "TiZr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 711,
+     "group": "TiNb_strain_shear_b0",
+     "composition": "TiNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 980,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 0,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 1043,
+     "group": "TiZrNb_strain_shear_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 29,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 639,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 318,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 153,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 245,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 208,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 165,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 863,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 556,
+     "group": "TiZr_strain_vol_b0",
+     "composition": "TiZr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 406,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 1020,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 10,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 351,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 1049,
+     "group": "TiZrNb_strain_shear_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 885,
+     "group": "ZrNb_strain_shear_b1",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 601,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 889,
+     "group": "ZrNb_strain_shear_b1",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 985,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 219,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 670,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 314,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 825,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 41,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 724,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 127,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 808,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 992,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 900,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 1051,
+     "group": "TiZrNb_strain_shear_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 700,
+     "group": "TiNb_strain_vol_b0",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 728,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 120,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 223,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 674,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 702,
+     "group": "TiNb_strain_vol_b0",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 561,
+     "group": "TiZr_strain_shear_b0",
+     "composition": "TiZr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 107,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 113,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 501,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 622,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 148,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 624,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 953,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 642,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 187,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 713,
+     "group": "TiNb_strain_vol_b1",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 211,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 661,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 151,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 517,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 1048,
+     "group": "TiZrNb_strain_vol_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 1012,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 946,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 265,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 97,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 630,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 345,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 967,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 1045,
+     "group": "TiZrNb_strain_shear_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 895,
+     "group": "ZrNb_strain_shear_b1",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 372,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 581,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 954,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 763,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 995,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 453,
+     "group": "Nb_strain_shear_b0",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 709,
+     "group": "TiNb_strain_shear_b0",
+     "composition": "TiNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 809,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 88,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 1023,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 19,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 256,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 344,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 974,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 956,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 56,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 535,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 618,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 881,
+     "group": "ZrNb_strain_shear_b1",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 890,
+     "group": "ZrNb_strain_vol_b1",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 119,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 325,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 64,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 1006,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 653,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 543,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 106,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 234,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 28,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 613,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 459,
+     "group": "Nb_strain_shear_b1",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 675,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 85,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 532,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 293,
+     "group": "Zr_strain_shear_b0",
+     "composition": "Zr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 627,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 987,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 26,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 784,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 712,
+     "group": "TiNb_strain_vol_b1",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 446,
+     "group": "Nb_strain_vol_b0",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 941,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 787,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 328,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 212,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 979,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 909,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 722,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 994,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 736,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 437,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 500,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 820,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 116,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 91,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 575,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 84,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 813,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 180,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 1002,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 908,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 526,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 280,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 463,
+     "group": "Nb_strain_shear_b1",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 855,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 879,
+     "group": "ZrNb_strain_shear_b0",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 13,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 435,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 663,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 368,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 599,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 733,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 566,
+     "group": "TiZr_strain_vol_b0",
+     "composition": "TiZr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 1040,
+     "group": "TiZrNb_strain_vol_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 951,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 276,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 1000,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 875,
+     "group": "ZrNb_strain_shear_b0",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 311,
+     "group": "Zr_strain_vol_b1",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 401,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 25,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 22,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 218,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 817,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 667,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 633,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 275,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 154,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 481,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 760,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 741,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 436,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 856,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 966,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 413,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 498,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 955,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 952,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 989,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 793,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 814,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 883,
+     "group": "ZrNb_strain_shear_b1",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 380,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 266,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 831,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 737,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 585,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 522,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 574,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 1018,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 805,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 472,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 746,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 417,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 912,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 130,
+     "group": "Ti_strain_shear_b0",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 235,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 822,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 804,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 7,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 848,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 930,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 290,
+     "group": "Zr_strain_vol_b0",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 227,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 544,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 931,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 621,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 564,
+     "group": "TiZr_strain_vol_b0",
+     "composition": "TiZr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 308,
+     "group": "Zr_strain_vol_b1",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 957,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 73,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 381,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 183,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 1013,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 410,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 433,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 720,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 595,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 189,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 306,
+     "group": "Zr_strain_vol_b1",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 948,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 355,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 243,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 780,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 965,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 668,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 878,
+     "group": "ZrNb_strain_vol_b0",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 412,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 1042,
+     "group": "TiZrNb_strain_vol_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 262,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 1038,
+     "group": "TiZrNb_strain_vol_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 391,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 666,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 1029,
+     "group": "TiZrNb_strain_shear_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 439,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 1054,
+     "group": "TiZrNb_strain_vol_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 83,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 504,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 915,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 603,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 457,
+     "group": "Nb_strain_shear_b1",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 907,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 63,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 70,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 452,
+     "group": "Nb_strain_vol_b0",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 105,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 641,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 1035,
+     "group": "TiZrNb_strain_shear_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 399,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 833,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 149,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 703,
+     "group": "TiNb_strain_shear_b0",
+     "composition": "TiNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 960,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 432,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 988,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 851,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 253,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 553,
+     "group": "TiZr_strain_shear_b0",
+     "composition": "TiZr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 776,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 164,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 315,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 255,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 244,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 405,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 540,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 755,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 173,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 274,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 937,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 420,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 309,
+     "group": "Zr_strain_vol_b1",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 201,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 160,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 44,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 321,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 336,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 387,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 418,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 842,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 268,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 177,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 197,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 537,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 838,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 926,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 826,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 428,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 110,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 366,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 976,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 482,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 494,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 869,
+     "group": "ZrNb_strain_shear_b0",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 429,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 997,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 134,
+     "group": "Ti_strain_shear_b0",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 292,
+     "group": "Zr_strain_vol_b0",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 802,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 188,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 444,
+     "group": "Nb_strain_vol_b0",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 506,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 815,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 196,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 697,
+     "group": "TiNb_strain_shear_b0",
+     "composition": "TiNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 363,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 884,
+     "group": "ZrNb_strain_vol_b1",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 421,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 598,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 128,
+     "group": "Ti_strain_shear_b0",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 662,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 698,
+     "group": "TiNb_strain_vol_b0",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 512,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 748,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 569,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 376,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 467,
+     "group": "Nb_strain_shear_b1",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 445,
+     "group": "Nb_strain_shear_b0",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 46,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 694,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 137,
+     "group": "Ti_strain_shear_b1",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 542,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 476,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 671,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 982,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 658,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 570,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 438,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 492,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 37,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 176,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 493,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 447,
+     "group": "Nb_strain_shear_b0",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 605,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 551,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 388,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 692,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 617,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 520,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 1010,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 644,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 927,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 172,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 69,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 775,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 479,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 610,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 649,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 45,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 484,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 928,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 798,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 539,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 1044,
+     "group": "TiZrNb_strain_vol_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 80,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 536,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 354,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 426,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 1030,
+     "group": "TiZrNb_strain_vol_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 191,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 935,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 707,
+     "group": "TiNb_strain_shear_b0",
+     "composition": "TiNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 983,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 348,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 35,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 1016,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 21,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 3,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 1039,
+     "group": "TiZrNb_strain_shear_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 163,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 195,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 827,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 611,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 756,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 338,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 152,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 224,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 762,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 327,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 95,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 828,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 74,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 138,
+     "group": "Ti_strain_shear_b1",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 362,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 691,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 629,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 626,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 1032,
+     "group": "TiZrNb_strain_vol_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 89,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 818,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 797,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 747,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 854,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 316,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 560,
+     "group": "TiZr_strain_vol_b0",
+     "composition": "TiZr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 637,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 385,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 216,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 779,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 688,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 903,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 710,
+     "group": "TiNb_strain_vol_b0",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 203,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 751,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 892,
+     "group": "ZrNb_strain_vol_b1",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 273,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 891,
+     "group": "ZrNb_strain_shear_b1",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 591,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 75,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 743,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 587,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 271,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 142,
+     "group": "Ti_strain_shear_b1",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 441,
+     "group": "Nb_strain_shear_b0",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 38,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 454,
+     "group": "Nb_strain_vol_b0",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 1041,
+     "group": "TiZrNb_strain_shear_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 210,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 565,
+     "group": "TiZr_strain_shear_b0",
+     "composition": "TiZr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 600,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 285,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 49,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 242,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 656,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 139,
+     "group": "Ti_strain_shear_b1",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 389,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 39,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 628,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 910,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 801,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 636,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 846,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 947,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 324,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 1007,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 129,
+     "group": "Ti_strain_shear_b0",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 993,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 819,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 971,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 803,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 686,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 480,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 772,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 357,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 171,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 850,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 589,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 220,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 744,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 1022,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 146,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 645,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 77,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 868,
+     "group": "ZrNb_strain_vol_b0",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 483,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 279,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 52,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 1004,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 699,
+     "group": "TiNb_strain_shear_b0",
+     "composition": "TiNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 373,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 1055,
+     "group": "TiZrNb_strain_shear_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 742,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 655,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 342,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 872,
+     "group": "ZrNb_strain_vol_b0",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 837,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 612,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 12,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 456,
+     "group": "Nb_strain_vol_b1",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 754,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 277,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 750,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 916,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 673,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 284,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 660,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 715,
+     "group": "TiNb_strain_vol_b1",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 66,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 215,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 832,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 71,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 563,
+     "group": "TiZr_strain_shear_b0",
+     "composition": "TiZr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 448,
+     "group": "Nb_strain_vol_b0",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 161,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 370,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 757,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 226,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 319,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 300,
+     "group": "Zr_strain_vol_b0",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 371,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 996,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 619,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 375,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 571,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 475,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 5,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 945,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 335,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 409,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 943,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 1027,
+     "group": "TiZrNb_strain_shear_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 1034,
+     "group": "TiZrNb_strain_vol_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 557,
+     "group": "TiZr_strain_shear_b0",
+     "composition": "TiZr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 882,
+     "group": "ZrNb_strain_vol_b1",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 346,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 23,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 94,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 576,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 870,
+     "group": "ZrNb_strain_vol_b0",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 411,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 461,
+     "group": "Nb_strain_shear_b1",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 584,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 547,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 158,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 1003,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 718,
+     "group": "TiNb_strain_vol_b1",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 963,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 905,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 515,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 1047,
+     "group": "TiZrNb_strain_shear_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 704,
+     "group": "TiNb_strain_vol_b0",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 824,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 821,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 972,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 791,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 921,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 419,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 701,
+     "group": "TiNb_strain_shear_b0",
+     "composition": "TiNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 764,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 82,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 606,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 761,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 261,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 844,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 1021,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 934,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 607,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 93,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 634,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 458,
+     "group": "Nb_strain_vol_b1",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 836,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 514,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 86,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 684,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 202,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 434,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 61,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 350,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 577,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 782,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 640,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 1026,
+     "group": "TiZrNb_strain_vol_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 50,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 136,
+     "group": "Ti_strain_shear_b1",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 602,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 516,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 841,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 739,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 205,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 495,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 939,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 588,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 795,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 990,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 958,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 525,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 51,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 511,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 100,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 690,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 991,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 462,
+     "group": "Nb_strain_vol_b1",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 466,
+     "group": "Nb_strain_vol_b1",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 533,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 168,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 513,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 170,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 572,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 592,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 548,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 583,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 918,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 238,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 680,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 652,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 386,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 54,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 20,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 807,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 964,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 696,
+     "group": "TiNb_strain_vol_b0",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 123,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 278,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 984,
+     "group": "TiZrNb_rattle20_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 1014,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 360,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 68,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 719,
+     "group": "TiNb_strain_vol_b1",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 531,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 147,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 347,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 394,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 460,
+     "group": "Nb_strain_vol_b1",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 888,
+     "group": "ZrNb_strain_vol_b1",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 858,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 440,
+     "group": "Nb_strain_vol_b0",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 580,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 812,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 545,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 382,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 287,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 490,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 975,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 184,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 302,
+     "group": "Zr_strain_vol_b0",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 449,
+     "group": "Nb_strain_shear_b0",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 862,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 34,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 143,
+     "group": "Ti_strain_shear_b1",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 340,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 365,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 835,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 648,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 721,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 549,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 999,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 96,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 395,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 940,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 734,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 425,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 175,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 726,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 67,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 305,
+     "group": "Zr_strain_vol_b1",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 57,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 693,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 567,
+     "group": "TiZr_strain_shear_b0",
+     "composition": "TiZr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 296,
+     "group": "Zr_strain_vol_b0",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 959,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 901,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 524,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 181,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 477,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 1037,
+     "group": "TiZrNb_strain_shear_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 929,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 353,
+     "group": "Nb_rattle08_b1",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 646,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 1024,
+     "group": "TiZrNb_strain_vol_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 847,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 240,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 1011,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 840,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 768,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 785,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 272,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 303,
+     "group": "Zr_strain_shear_b0",
+     "composition": "Zr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 716,
+     "group": "TiNb_strain_vol_b1",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 307,
+     "group": "Zr_strain_vol_b1",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 860,
+     "group": "ZrNb_rattle28_b1",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 207,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 962,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 424,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 810,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 1005,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 341,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 140,
+     "group": "Ti_strain_shear_b1",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 115,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 17,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 829,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 839,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 104,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 614,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 125,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 873,
+     "group": "ZrNb_strain_shear_b0",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 811,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 519,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 499,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 258,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 796,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 897,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 367,
+     "group": "Nb_rattle14_b0",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 124,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 925,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 430,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 758,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 491,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 112,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 4,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 239,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 404,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 632,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 631,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 397,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 217,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 384,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 213,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 200,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 6,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 320,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 961,
+     "group": "TiZrNb_rattle14_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 590,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 214,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 950,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 117,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 33,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 949,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 1036,
+     "group": "TiZrNb_strain_vol_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 283,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 794,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 133,
+     "group": "Ti_strain_shear_b0",
+     "composition": "Ti",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 1053,
+     "group": "TiZrNb_strain_shear_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 431,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 933,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 485,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 150,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 157,
+     "group": "Zr_rattle04_b0",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 904,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 414,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 672,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 167,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 329,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 78,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 1028,
+     "group": "TiZrNb_strain_vol_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 72,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 114,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 635,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 942,
+     "group": "TiZrNb_rattle08_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 313,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 876,
+     "group": "ZrNb_strain_vol_b0",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 281,
+     "group": "Zr_rattle28_b1",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 681,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 823,
+     "group": "ZrNb_rattle20_b0",
+     "composition": "ZrNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 714,
+     "group": "TiNb_strain_vol_b1",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 270,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 473,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 834,
+     "group": "ZrNb_rattle28_b0",
+     "composition": "ZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 902,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 880,
+     "group": "ZrNb_strain_vol_b1",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 465,
+     "group": "Nb_strain_shear_b1",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 559,
+     "group": "TiZr_strain_shear_b0",
+     "composition": "TiZr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 871,
+     "group": "ZrNb_strain_shear_b0",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 162,
+     "group": "Zr_rattle04_b1",
+     "composition": "Zr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 246,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 917,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 443,
+     "group": "Nb_strain_shear_b0",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 555,
+     "group": "TiZr_strain_shear_b0",
+     "composition": "TiZr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 657,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 2,
+     "group": "Ti_rattle04_b1",
+     "composition": "Ti",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 778,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 252,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 792,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 65,
+     "group": "Ti_rattle14_b1",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 322,
+     "group": "Nb_rattle04_b1",
+     "composition": "Nb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 403,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 392,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 894,
+     "group": "ZrNb_strain_vol_b1",
+     "composition": "ZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 920,
+     "group": "TiZrNb_rattle04_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 118,
+     "group": "Ti_rattle28_b0",
+     "composition": "Ti",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 509,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 510,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 1015,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 55,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 573,
+     "group": "TiNb_rattle04_b0",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 263,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 604,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 204,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 228,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 442,
+     "group": "Nb_strain_vol_b0",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 1050,
+     "group": "TiZrNb_strain_vol_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 32,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 685,
+     "group": "TiNb_rattle28_b0",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 455,
+     "group": "Nb_strain_shear_b0",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 40,
+     "group": "Ti_rattle08_b1",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 182,
+     "group": "Zr_rattle08_b0",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 209,
+     "group": "Zr_rattle14_b0",
+     "composition": "Zr",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 679,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 18,
+     "group": "Ti_rattle08_b0",
+     "composition": "Ti",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 608,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 488,
+     "group": "TiZr_rattle08_b0",
+     "composition": "TiZr",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 471,
+     "group": "Nb_strain_shear_b1",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 379,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 651,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 745,
+     "group": "ZrNb_rattle04_b1",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 298,
+     "group": "Zr_strain_vol_b0",
+     "composition": "Zr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 427,
+     "group": "Nb_rattle28_b0",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 486,
+     "group": "TiZr_rattle04_b0",
+     "composition": "TiZr",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 594,
+     "group": "TiNb_rattle04_b1",
+     "composition": "TiNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 906,
+     "group": "TiZrNb_rattle04_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 620,
+     "group": "TiNb_rattle14_b0",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 783,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 717,
+     "group": "TiNb_strain_vol_b1",
+     "composition": "TiNb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 102,
+     "group": "Ti_rattle20_b1",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 333,
+     "group": "Nb_rattle08_b0",
+     "composition": "Nb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 470,
+     "group": "Nb_strain_vol_b1",
+     "composition": "Nb",
+     "kind": "strain_vol",
+     "n_atoms": 54
+    },
+    {
+     "index": 615,
+     "group": "TiNb_rattle08_b1",
+     "composition": "TiNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 790,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 469,
+     "group": "Nb_strain_shear_b1",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 867,
+     "group": "ZrNb_strain_shear_b0",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 393,
+     "group": "Nb_rattle20_b0",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 297,
+     "group": "Zr_strain_shear_b0",
+     "composition": "Zr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 705,
+     "group": "TiNb_strain_shear_b0",
+     "composition": "TiNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 664,
+     "group": "TiNb_rattle20_b1",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 552,
+     "group": "TiZr_strain_vol_b0",
+     "composition": "TiZr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 534,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 799,
+     "group": "ZrNb_rattle14_b0",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 199,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 206,
+     "group": "Zr_rattle08_b1",
+     "composition": "Zr",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 299,
+     "group": "Zr_strain_shear_b0",
+     "composition": "Zr",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 538,
+     "group": "TiZr_rattle28_b1",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 1031,
+     "group": "TiZrNb_strain_shear_b0",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 753,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 554,
+     "group": "TiZr_strain_vol_b0",
+     "composition": "TiZr",
+     "kind": "strain_vol",
+     "n_atoms": 16
+    },
+    {
+     "index": 527,
+     "group": "TiZr_rattle28_b0",
+     "composition": "TiZr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 998,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 377,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 774,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 781,
+     "group": "ZrNb_rattle08_b1",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 54
+    },
+    {
+     "index": 423,
+     "group": "Nb_rattle20_b1",
+     "composition": "Nb",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 730,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 53,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 944,
+     "group": "TiZrNb_rattle14_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 383,
+     "group": "Nb_rattle14_b1",
+     "composition": "Nb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 765,
+     "group": "ZrNb_rattle08_b0",
+     "composition": "ZrNb",
+     "kind": "rattle08",
+     "n_atoms": 16
+    },
+    {
+     "index": 731,
+     "group": "ZrNb_rattle04_b0",
+     "composition": "ZrNb",
+     "kind": "rattle04",
+     "n_atoms": 16
+    },
+    {
+     "index": 508,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 236,
+     "group": "Zr_rattle20_b0",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 251,
+     "group": "Zr_rattle20_b1",
+     "composition": "Zr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    },
+    {
+     "index": 518,
+     "group": "TiZr_rattle20_b1",
+     "composition": "TiZr",
+     "kind": "rattle20",
+     "n_atoms": 54
+    }
+   ],
+   "calibration": {
+    "f_rmse_mev_per_a": [
+     28.132026648225107,
+     29.959506500048363,
+     31.83878885653176,
+     34.40899378129799,
+     37.27687443604204,
+     33.02795445054125,
+     33.74588662102238,
+     34.76977032236587,
+     25.697263117890007,
+     33.8786098961826,
+     31.470300025046825,
+     35.21260888416153,
+     27.346946050844036,
+     34.870222330760264,
+     31.408058488416206,
+     35.67306642554423,
+     176.15427903521405,
+     1386.9034034735075,
+     767.6525271112331,
+     871.5608128443077,
+     318.58161715289435,
+     316.14506766113084,
+     246.46593856228458,
+     8395.118378940138,
+     335.4584562133582,
+     505.33299708104573,
+     359.8070944140268,
+     811.1979254243084,
+     113.61003197765159,
+     264.1869048075407,
+     2208.229599408389,
+     1060.8049171571852,
+     41.34506721332628,
+     29.66194889615802,
+     86.26609984499423,
+     57.99307124399347,
+     27.73008804718879,
+     32.70806664969554,
+     17.02989396491775,
+     17.185293817859673,
+     90.8320364721152,
+     108.64054396084757,
+     84.1884258370422,
+     40.718059360316786,
+     19.08381378412442,
+     16.179017242733295,
+     37.00402848397062,
+     34.76995947300983,
+     55.37821872796482,
+     76.17081532611903,
+     98.51811580821732,
+     76.83601184781432,
+     95.95148550976229,
+     85.47488853883802,
+     87.16392004221687,
+     44.476892302618566,
+     76.58711930253864,
+     64.56741285717041,
+     97.42668651168678,
+     82.03581799573139,
+     45.829484170552725,
+     112.38088616189746,
+     79.73894711691199,
+     62.57617173819918,
+     16.220187828128527,
+     16.174442197954377,
+     17.279943622115326,
+     15.286519764584181,
+     18.038137764052422,
+     12.808001802758294,
+     16.186404642982108,
+     18.825776674360124,
+     41.875286624070036,
+     47.80967297306448,
+     49.42306999856363,
+     46.598315017878136,
+     38.41537459164851,
+     41.48899075392771,
+     35.371266174230094,
+     38.06628728720686,
+     34.803155043664106,
+     49.79292169100372,
+     46.253546629095986,
+     45.522919791163275,
+     40.98852426389976,
+     39.735024859749494,
+     43.37434627400767,
+     53.46948516136858,
+     220.6325251706593,
+     795.6273320182629,
+     908.7003657014553,
+     938.9271622966755,
+     615.8536469859945,
+     945.6724159626083,
+     1100.9463430650883,
+     951.9667297503241,
+     1389.133010667485,
+     758.4122131262177,
+     616.873695334933,
+     1417.092580311388,
+     348.35816450431093,
+     713.947880356711,
+     1771.2354625675232,
+     429.83458974850436,
+     36.71420690666893,
+     40.64726884933074,
+     33.10191341611523,
+     37.48177788791939,
+     36.97632039523218,
+     33.15557156163586,
+     33.03499866728808,
+     34.77318877623692,
+     37.917184103940514,
+     39.49021111199048,
+     37.029555570336534,
+     41.66993105406018,
+     34.65914788567105,
+     34.1576700398408,
+     37.00514019768865,
+     36.33847087161546,
+     77.46813301731973,
+     73.72400214521119,
+     75.85371451174115,
+     64.9948390596194,
+     72.67582766282204,
+     70.27691500635302,
+     81.13683178027374,
+     70.68730899222665,
+     74.44744826300763,
+     68.84972633837818,
+     79.72973114321849,
+     76.77635567081181,
+     71.35830271654397,
+     71.39819694057609,
+     74.19540689977079,
+     72.18919621031999,
+     88.33294218985681,
+     81.04626477456412,
+     111.35799118862404,
+     73.44722614363694,
+     85.69571871993094,
+     128.6149865173278,
+     99.64666497495672,
+     83.88622614399452,
+     86.78464245718531,
+     122.29911623536375,
+     87.3566695565619,
+     80.55262166567799,
+     89.93187773690202,
+     91.35254010197767,
+     94.82861462918743,
+     101.33132130079252,
+     125.87133296609778,
+     104.40690581599273,
+     117.34856130186837,
+     98.950542255378,
+     103.98359783890568,
+     97.93710018636196,
+     122.85180273231514,
+     95.03197096857785,
+     111.80510413173707,
+     110.51555447130306,
+     110.29389136997659,
+     87.94162640246203,
+     83.20499893656284,
+     87.52944301873409,
+     85.53680258360836,
+     83.96884915992094,
+     162.84624042147405,
+     250.64779034035968,
+     134.28474777359654,
+     257.40998285781325,
+     160.2038978984887,
+     216.4919520841104,
+     185.79038258753914,
+     99.7221885675469,
+     147.89986389173214,
+     276.5408104038257,
+     175.53250874729068,
+     119.87756610016518,
+     113.99692405382875,
+     170.67039354507378,
+     134.66967965306145,
+     166.6005645143702,
+     90.07367003761566,
+     59.821367231981775,
+     66.06482095805485,
+     59.97287910488546,
+     55.50244781838761,
+     61.21236607786394,
+     59.11791999352586,
+     57.167877032302385,
+     55.62179355102596,
+     62.14538146942993,
+     53.301052203059854,
+     57.57418146190688,
+     86.61424634714193,
+     61.673693240652504,
+     53.72445401196119,
+     59.6793596964728,
+     55.12361635494762,
+     62.897093401017635,
+     52.69832739715163,
+     69.10628280527298,
+     56.777177557577765,
+     73.22326386197294,
+     56.8168691192002,
+     68.43308716091606,
+     58.379359208704706,
+     51.08953732831904,
+     51.50829414759694,
+     56.46657054060699,
+     49.16846959589989,
+     54.78837237348974,
+     68.59228975561074,
+     47.52593465716228,
+     496.64433687780814,
+     1113.2952142791594,
+     371.7025168663477,
+     736.0270688734059,
+     1637.9523350353927,
+     346.0381216835614,
+     1706.7957150113343,
+     12517.137335944934,
+     438.0511866195268,
+     657.4464023199001,
+     674.7965330355153,
+     876.9725497654221,
+     504.9548510269503,
+     638.6088437967567,
+     862.5695129692793,
+     241.2245426015107,
+     42.49868641793165,
+     42.895433887718774,
+     44.69565096049094,
+     55.112702296639924,
+     48.409203360054406,
+     49.18617751338882,
+     52.88981597423851,
+     44.62587665821754,
+     158.46599040390694,
+     240.93130252941634,
+     191.38624722432613,
+     201.97265285621734,
+     204.72475736877698,
+     295.83299080254767,
+     179.28516704883864,
+     328.954665754532,
+     241.69464509402977,
+     270.57951840472236,
+     1244.649529128056,
+     229.44016231250566,
+     173.16536453154472,
+     194.32746050964363,
+     199.57403951778744,
+     197.26423736203876,
+     87.63648832270067,
+     77.664026647188,
+     79.21549288096767,
+     77.82815896844514,
+     84.46000288599667,
+     80.63224394122649,
+     75.60357779829114,
+     91.04795263883804,
+     86.01512607349123,
+     84.52145716994465,
+     88.86379806564283,
+     93.94671826629727,
+     85.64831796024188,
+     79.75132867969162,
+     84.78214843937506,
+     86.34694608015583,
+     261.1159296752612,
+     363.1816387373633,
+     237.37865462471993,
+     164.5510064687373,
+     283.3766702306876,
+     186.47800102730625,
+     327.2802360340242,
+     232.10064519090392,
+     175.31366818421463,
+     180.27776585275993,
+     320.98119451673625,
+     171.70862395676008,
+     179.1272522441607,
+     493.98911389161884,
+     203.16780457896115,
+     358.8419440354693
+    ],
+    "f_mae_mev_per_a": [
+     22.339673490471156,
+     23.123445231459314,
+     24.4316757019782,
+     25.72912007256229,
+     31.143540286783068,
+     27.404445899562692,
+     27.400729452021228,
+     28.465608585421634,
+     20.39975190924202,
+     29.84114223575557,
+     25.865484824156624,
+     26.434473258913012,
+     22.150758279490272,
+     24.995899598860564,
+     24.572907109375265,
+     28.69806697755119,
+     123.79066060026882,
+     887.0537266510606,
+     557.1613056120437,
+     643.6339320517911,
+     225.1569586102855,
+     212.41697025705176,
+     176.47974600619003,
+     4688.12400680465,
+     264.0048622296996,
+     375.66161824812343,
+     245.98988721666169,
+     663.5857553219248,
+     78.32401183120642,
+     181.40333369662562,
+     1558.6184128221987,
+     830.3541047133021,
+     34.26782488806474,
+     24.83331786447035,
+     73.94394692637808,
+     44.613379261534725,
+     23.27467585532743,
+     26.865097488923528,
+     13.978118549004567,
+     14.647162046072651,
+     73.6076540402124,
+     87.21969210497336,
+     67.34618879341731,
+     32.933642229081464,
+     15.19307744802779,
+     12.937336451451861,
+     28.26601928768682,
+     27.52454921569758,
+     41.00773887987651,
+     57.20200703681483,
+     69.68605862597612,
+     60.88095154773843,
+     70.11233145906198,
+     65.82297226346536,
+     68.02317175528948,
+     33.52488339736664,
+     58.12197403421027,
+     49.12330899722143,
+     77.30640391856073,
+     65.28790126472033,
+     35.69152770359961,
+     83.49931868630384,
+     65.22883952998704,
+     51.815325819517135,
+     13.238674116914842,
+     13.016813430104957,
+     13.935987658016787,
+     11.976956637778265,
+     14.45053730022409,
+     10.178468489238572,
+     12.809824799144113,
+     15.35605427968233,
+     33.986263829034506,
+     41.29955048467326,
+     39.69491119386905,
+     38.38182717030606,
+     30.91460842275348,
+     35.76901077491315,
+     29.243753331450126,
+     31.463111221563132,
+     29.370557563697396,
+     40.452164676160635,
+     36.47075425859898,
+     37.224608485539285,
+     33.18254848901352,
+     31.4586654154794,
+     36.67557294706361,
+     42.76152588989862,
+     183.3472728140716,
+     637.8590388766404,
+     666.1669790986966,
+     725.6208540417774,
+     457.7283911766869,
+     584.4309561788759,
+     800.6557786279113,
+     584.5371665956907,
+     1075.636401338121,
+     536.430358976859,
+     492.7046399751713,
+     732.4200034361912,
+     236.11126751336568,
+     561.2392474687595,
+     1425.6285059990805,
+     320.3566071055331,
+     28.348187703886534,
+     33.15832620937823,
+     25.97289055495639,
+     29.808459585954395,
+     29.98752364916093,
+     27.651777153268334,
+     26.522606050174367,
+     29.938930136725386,
+     30.941613851879502,
+     32.65289060028942,
+     29.990753481231895,
+     35.29019943901699,
+     27.317444665808665,
+     28.2888339751422,
+     30.38879528288293,
+     29.704150031376276,
+     62.43993228498165,
+     58.21781523920469,
+     60.865499245442784,
+     52.475102180347655,
+     57.66610645364244,
+     55.94956781382373,
+     64.57394396158678,
+     58.52568824314656,
+     57.19868967959288,
+     56.19880474764423,
+     64.75404701708429,
+     60.12170263132378,
+     56.048796663609835,
+     58.269774513739684,
+     58.65047908696949,
+     60.623193513107275,
+     71.11671612479118,
+     56.69045823116507,
+     87.95285106105865,
+     55.1512447761246,
+     67.16770158110614,
+     100.91458386356909,
+     78.69249594543145,
+     65.61990821627992,
+     69.90136898288367,
+     100.60632078059032,
+     68.11881601830274,
+     65.42373128399083,
+     71.89252704988687,
+     73.47049106427662,
+     70.61263116321106,
+     83.60993243456213,
+     106.71826847574151,
+     87.08134680660106,
+     90.69726315954301,
+     81.03774268791071,
+     88.17251472376502,
+     79.99736304540382,
+     96.59207118424635,
+     75.60423068332749,
+     93.29074510481021,
+     92.8645681200101,
+     93.54038751959438,
+     69.55833718784572,
+     68.35580223653203,
+     72.02916125436072,
+     68.45103380226406,
+     63.86487069684831,
+     131.7076423770424,
+     200.80052178381234,
+     102.45035269023589,
+     187.36907056746912,
+     124.15339666366954,
+     172.602979540695,
+     143.71422000158842,
+     75.29536581001247,
+     125.42220322201212,
+     217.94309094058204,
+     151.36781597831515,
+     92.28772885586885,
+     86.8356624411712,
+     122.7112644569616,
+     106.57333984179589,
+     132.08500101802613,
+     70.11595210901568,
+     48.75333983874713,
+     53.69088501879418,
+     47.49799967482738,
+     45.08383314905022,
+     49.56273257752213,
+     47.00312730984536,
+     46.60882917864587,
+     41.35404479820582,
+     48.15748996627292,
+     42.03615378925628,
+     46.01666764231114,
+     66.58021279470465,
+     49.203215501374665,
+     44.25436137317291,
+     48.19472821383586,
+     43.86394239977095,
+     50.6587043216894,
+     42.452056930658784,
+     54.228515868557615,
+     46.9884245454285,
+     55.60565623061785,
+     43.415257322230346,
+     59.317637399998034,
+     48.1634787009941,
+     38.349044278580244,
+     40.32456086427759,
+     45.27843113773989,
+     39.76648983715656,
+     44.755115666523565,
+     54.08458754894226,
+     39.40401683679935,
+     389.6231837901098,
+     829.2289535316792,
+     301.14266545308993,
+     532.9698976391811,
+     1346.0233613575967,
+     274.90412617953996,
+     1121.3898551647644,
+     5185.803102092489,
+     309.86545420435624,
+     481.8900058393217,
+     533.5007102261917,
+     609.6715950019596,
+     383.5298025713599,
+     430.0443676601247,
+     652.7685434136729,
+     186.0944676746995,
+     32.53803638375061,
+     34.3707083205748,
+     35.16418415386021,
+     44.68098978678526,
+     39.75476492414555,
+     39.40884923714552,
+     42.52884310466866,
+     35.973356671013946,
+     126.1614974237728,
+     173.24179369399684,
+     133.3280544032488,
+     154.79793387853888,
+     161.09460743082127,
+     213.0895575099439,
+     138.65015787508804,
+     174.19501288206195,
+     153.06933132515567,
+     182.57834039233197,
+     603.4420714019077,
+     175.81084823636067,
+     133.26901471953857,
+     142.53635338414423,
+     152.30271828355944,
+     148.4210185475423,
+     68.82545625410694,
+     62.884087860922435,
+     62.375958843285424,
+     62.71344750705879,
+     68.30183093380029,
+     65.2383687207002,
+     59.477005328111716,
+     73.87706401978065,
+     66.94833052537264,
+     63.92525270540668,
+     73.59877582078902,
+     78.01503465944546,
+     66.25149631680836,
+     64.89119873380113,
+     67.12210557662604,
+     67.96218316281053,
+     207.55483560367028,
+     242.2002164513094,
+     179.47279128008637,
+     129.15611516651236,
+     206.2526589698287,
+     145.8918946835891,
+     242.01886666060875,
+     184.2835952950784,
+     135.5211899665474,
+     144.24788278057883,
+     234.00943198543632,
+     131.15914422576776,
+     136.56770887367566,
+     270.5787176715603,
+     153.78117837659644,
+     212.69792402248396
+    ],
+    "disagreement_mean_mev_per_a": [
+     17.101877146378847,
+     18.816173471072602,
+     19.818015659536727,
+     19.20459662309431,
+     20.979897647805114,
+     21.558934412887293,
+     19.935823563815493,
+     22.416963880023857,
+     16.638197243000683,
+     20.419899294393566,
+     18.91970769254451,
+     20.290419598320998,
+     19.153331884567027,
+     22.359448879670584,
+     19.691077204333173,
+     22.301658608208037,
+     102.87524698382335,
+     618.5039469845219,
+     430.25227305888393,
+     547.0095807634099,
+     153.84378988579513,
+     195.70820160468068,
+     171.2907766965289,
+     1944.6673463884156,
+     275.0812045918636,
+     577.1178776542351,
+     323.3902107730287,
+     623.7041749393692,
+     100.5828005712611,
+     145.34106812126225,
+     907.740287729297,
+     687.4851098575837,
+     17.64564433645093,
+     14.493856171548643,
+     30.703675850321392,
+     36.462339503651656,
+     14.75532118234062,
+     19.379932022805896,
+     15.115157484016827,
+     11.212056931217663,
+     34.898784760849345,
+     32.21292899508229,
+     35.06626044996734,
+     15.786610360297288,
+     17.058518232847966,
+     17.87871807116053,
+     29.52653323896492,
+     16.74555647149949,
+     35.41642142388396,
+     33.50942494619683,
+     37.202350897255,
+     41.865259524646085,
+     45.995855098821785,
+     47.54092568130963,
+     38.40726786789431,
+     29.286895606087057,
+     44.039982515838375,
+     38.251960660147894,
+     38.20721123788001,
+     46.251926868238854,
+     33.315556165153126,
+     56.82944355138811,
+     44.3176947748564,
+     30.886830220368747,
+     15.165847090027043,
+     14.980323351436974,
+     15.936597501300882,
+     13.357697756495448,
+     15.76029938797965,
+     13.010188531930448,
+     15.70216940782529,
+     14.766367005145407,
+     19.90413294328053,
+     17.741086924167792,
+     26.09667999128749,
+     24.0706360862266,
+     18.173688176010664,
+     22.464606943315523,
+     19.756683007833118,
+     24.36059816549235,
+     17.03821952180956,
+     20.1416276139819,
+     24.61727294435798,
+     24.119591556456704,
+     20.345706924934934,
+     17.97190013795318,
+     18.79202934485237,
+     27.761948694480775,
+     90.85843041902545,
+     231.28745019979925,
+     415.34215842367695,
+     370.4297373229809,
+     205.15225576590564,
+     236.84751719410562,
+     363.51443616789857,
+     245.00462105322762,
+     342.55828294244657,
+     209.331579767786,
+     310.0429429659346,
+     299.56161906794523,
+     155.38059116170413,
+     377.4482870218279,
+     632.949355012642,
+     148.36071604151095,
+     62.16118844941174,
+     58.74530060161388,
+     58.811998630947244,
+     57.16135721595122,
+     64.55977140480066,
+     50.11743128519469,
+     57.10775502981385,
+     50.93812992068781,
+     30.09378654765184,
+     63.192888998325145,
+     58.117382241194534,
+     55.6313168961849,
+     60.27077251791753,
+     54.21779447600209,
+     47.93758236572195,
+     45.726692576954456,
+     94.46275796988431,
+     77.92056141687578,
+     91.21202556026138,
+     88.5720647564741,
+     85.98447128609551,
+     94.77902490352382,
+     88.44116808418099,
+     90.11800118687525,
+     86.80553937800991,
+     78.92438947386694,
+     79.97141214606185,
+     90.56711154233896,
+     84.33553899048553,
+     93.49828911549439,
+     85.70884729378587,
+     88.6927207644767,
+     86.53596379153649,
+     73.33899710219852,
+     105.36955149520877,
+     88.54467187057921,
+     91.13091027840196,
+     92.05535379264948,
+     88.79620006364866,
+     93.72235044088268,
+     84.51210853960266,
+     105.1099800852971,
+     91.56568530336027,
+     72.65063185014507,
+     89.90378371585115,
+     97.6221379876846,
+     76.38181875571526,
+     83.48492020746227,
+     96.42635424444249,
+     89.29884267766283,
+     100.67530441524237,
+     96.38658320396776,
+     99.14804006244506,
+     91.68592736864822,
+     93.40224202133895,
+     100.146823202677,
+     90.82730533630107,
+     108.46167631572463,
+     97.5296874552653,
+     104.2101859182947,
+     98.3750338268351,
+     68.79360038221711,
+     96.33833510543587,
+     98.61756601273933,
+     127.38450243390508,
+     185.50337602164527,
+     126.01515460059743,
+     158.74309218475895,
+     142.76144465547586,
+     221.04886819619722,
+     154.70260130220726,
+     100.58890380968037,
+     129.48623327082072,
+     283.1808199577241,
+     157.51741240559764,
+     121.00493418578253,
+     110.62022554405273,
+     146.10669021956556,
+     112.7170525654966,
+     172.9987808729558,
+     95.18949127974646,
+     73.49165391171809,
+     129.82588098725896,
+     71.6500859953223,
+     112.47116992060634,
+     68.03778426327366,
+     76.14223435845025,
+     69.79412576484924,
+     101.12550433759615,
+     74.58644109833179,
+     98.06090543244147,
+     73.96510481916391,
+     103.63206151540834,
+     67.44394713799835,
+     80.52521894764594,
+     71.38183628602673,
+     59.47455686872525,
+     65.69819190266568,
+     48.89920961080696,
+     62.584687714470356,
+     55.71007273527798,
+     53.96393617359653,
+     63.50845495115709,
+     61.68063433167714,
+     64.7808923681982,
+     57.8817583303575,
+     60.23762924417868,
+     61.886384448541136,
+     44.06445748714304,
+     51.07129435324857,
+     66.93556216360264,
+     53.00064243544851,
+     315.77591169760404,
+     561.8625466517422,
+     281.7539818125871,
+     512.4874542403384,
+     1059.6720491363699,
+     270.6332330654473,
+     699.819141766783,
+     844.7857720750821,
+     231.57655138306131,
+     395.12025557107313,
+     331.64831436115793,
+     347.1710662194183,
+     416.2710392758116,
+     346.5121242981015,
+     391.49334387503256,
+     206.3394875764779,
+     57.12475591573576,
+     51.16574449539865,
+     58.713858949627145,
+     57.9943114901543,
+     60.280144017261975,
+     52.94982429693734,
+     62.57178512582102,
+     61.27301345204083,
+     158.02902217705798,
+     164.7177372743265,
+     162.6537880478981,
+     148.25706727157095,
+     151.13961896294936,
+     256.58708629149817,
+     157.2242239880074,
+     170.76535411149058,
+     167.1160270958839,
+     184.49290225004742,
+     556.0320856968023,
+     221.75404508881562,
+     165.99214979288328,
+     166.42785840017854,
+     169.05503099274824,
+     167.34194189565008,
+     113.89776594287835,
+     125.38817155183779,
+     119.2419152033157,
+     114.77100987065253,
+     124.04849618296801,
+     136.4349016706422,
+     120.70771687990663,
+     118.82069237239767,
+     116.94995334610596,
+     116.47704166548897,
+     117.7585714121794,
+     115.96023878579508,
+     119.00408359778709,
+     121.28043728275443,
+     116.46568805759597,
+     117.64634140329002,
+     255.4049972850232,
+     258.3503637417891,
+     248.022360177719,
+     185.21194950201354,
+     235.446547226342,
+     238.72316569890032,
+     255.1004081476126,
+     198.65167619016486,
+     191.08688127280178,
+     189.8776541781265,
+     290.2766376229657,
+     172.698095870672,
+     206.77345258920622,
+     284.4019704284938,
+     199.13889226152665,
+     257.58671997245
+    ],
+    "disagreement_max_mev_per_a": [
+     21.798716856676684,
+     27.541753633159324,
+     27.85734771727352,
+     26.55467856753317,
+     28.73790547299873,
+     30.255041026322154,
+     25.132250137403776,
+     32.256841006861116,
+     22.696752301082483,
+     25.644279056148875,
+     24.086236023443846,
+     28.247211510422108,
+     31.620597659744426,
+     32.3733874941625,
+     26.252541433501996,
+     32.40141755958826,
+     252.2854787797287,
+     1592.2073192991434,
+     1344.5438455012286,
+     1343.4930682335,
+     277.922969054565,
+     456.7825107840737,
+     381.96760595790585,
+     7215.800508844083,
+     541.7442033903983,
+     1415.4691897164373,
+     1034.3075013327268,
+     1495.5676822126834,
+     214.68177024555206,
+     305.59297397111186,
+     1881.8512001867427,
+     1650.7940280623648,
+     25.652639550464777,
+     19.469915073285357,
+     45.205137173226866,
+     67.0467138367737,
+     21.34710282636829,
+     26.167782387637743,
+     18.69554336807683,
+     16.776471016215332,
+     58.57729948247571,
+     55.956848455417145,
+     54.02646081538542,
+     26.512847921985664,
+     33.11236523128848,
+     34.506999152977016,
+     54.27490451419156,
+     35.49488454927609,
+     54.28482452461207,
+     42.60527552745817,
+     59.490872885441085,
+     50.81238134249333,
+     82.92281875300313,
+     61.844332943148444,
+     75.27674789468276,
+     43.120500541800844,
+     79.7590438489583,
+     86.28250254668018,
+     63.81708509606507,
+     78.2379299787593,
+     51.029948799687595,
+     114.7255349047592,
+     74.92188287119905,
+     41.091092628646315,
+     25.65291137048178,
+     25.687770267664238,
+     34.55026009636256,
+     21.682743701920767,
+     26.74757004594324,
+     22.27490036605774,
+     27.919252447943883,
+     26.867625176607085,
+     27.234610458738178,
+     25.299010622294244,
+     37.74107226270523,
+     36.36470263966533,
+     28.093759490723116,
+     31.11668940343945,
+     23.98667877530373,
+     37.2110527723984,
+     27.448456989132726,
+     29.9381212371834,
+     34.13292802115924,
+     31.95237567416609,
+     28.74839750923651,
+     27.740440296554006,
+     30.822897895976332,
+     42.63938634061004,
+     172.0612827792614,
+     416.1651037792576,
+     737.7749055099847,
+     641.7564124110526,
+     387.1644318190582,
+     616.3167910746652,
+     736.6987696495901,
+     510.5850859597968,
+     768.4688710388957,
+     378.6685387614953,
+     649.2414258398336,
+     723.8061198147492,
+     428.6832134012832,
+     862.2975191375938,
+     1393.7283235152968,
+     205.9422827860629,
+     92.9733102659667,
+     78.65815736492493,
+     77.22188850164041,
+     73.97115391379658,
+     98.61439241423275,
+     71.8795716971695,
+     99.43623170782331,
+     71.23428160332617,
+     46.1480025465693,
+     102.6953804429927,
+     87.94091828283298,
+     75.7167586252974,
+     97.46728186513708,
+     79.16718151678454,
+     91.75568630105634,
+     70.5908291818244,
+     170.38210100725757,
+     117.86406005115875,
+     170.2916910073902,
+     181.39213776346867,
+     123.39824102408534,
+     169.58687990418127,
+     131.36361631739612,
+     150.8924872727935,
+     141.09274932119496,
+     141.46713840541892,
+     144.20494312935216,
+     134.11413047125467,
+     159.61941409614053,
+     172.565756664367,
+     160.66433569846575,
+     168.18312934510402,
+     151.9939129875646,
+     114.28267032115454,
+     155.9944189288248,
+     168.73382850631305,
+     140.38902341433499,
+     130.30573012643936,
+     167.44071487324715,
+     132.91098645912905,
+     113.7042224083269,
+     142.8915171014231,
+     120.06829616418013,
+     116.2096271740848,
+     117.3298725338619,
+     159.1959326440807,
+     106.492356670172,
+     131.722561971816,
+     163.5161322385948,
+     130.7061747459095,
+     179.52543521560128,
+     150.47698548296452,
+     175.88431550152976,
+     146.74506854221426,
+     169.2243798151329,
+     157.0557959449743,
+     126.56314460281159,
+     161.3653618832223,
+     137.23423408952306,
+     179.19024038986169,
+     141.69311619050723,
+     110.16154486235884,
+     144.38596794434338,
+     189.90807019338732,
+     174.04467184226155,
+     415.3460565198502,
+     197.57360627738933,
+     217.57738073427942,
+     270.607910793139,
+     383.0402689505696,
+     408.92443842058526,
+     143.12017085135656,
+     181.43995347447225,
+     644.990792673499,
+     288.52224439995103,
+     181.42124267354197,
+     230.29826524132986,
+     241.46667553859533,
+     229.5551094507713,
+     279.41169016480603,
+     161.75440572007338,
+     108.59022869637204,
+     244.35062797001183,
+     111.37833971947455,
+     193.90206213778845,
+     110.32980996683065,
+     121.10066336670155,
+     118.96396405952308,
+     210.3874849621922,
+     135.16991932291617,
+     182.3525525285571,
+     130.86644838434924,
+     178.01682399387255,
+     101.83251192015142,
+     131.55297072591833,
+     123.57314465565561,
+     77.30690085542848,
+     94.49326692667239,
+     83.2343572873629,
+     100.84387000489099,
+     84.90499631990292,
+     84.10036209983485,
+     89.45079139046808,
+     88.88582504206494,
+     95.3470902846894,
+     88.8649660128305,
+     96.84508420964197,
+     86.17880946350871,
+     67.0133346554819,
+     72.26190317048881,
+     121.37135256321861,
+     79.82068095934899,
+     601.2409632513574,
+     1802.5099078588364,
+     511.8338920513692,
+     1278.7863811426648,
+     3266.9311707584693,
+     427.5847059557028,
+     1422.7312566859441,
+     2120.3530215318856,
+     614.3616274534863,
+     937.5977469689213,
+     483.38995968051944,
+     614.402103899756,
+     1030.9896950719376,
+     881.4435628871289,
+     743.0874312352327,
+     409.2244090012841,
+     87.95268007790912,
+     80.37390044996764,
+     94.39925415026447,
+     109.53348909028001,
+     92.99250232683393,
+     93.82770313346225,
+     97.87928805514645,
+     117.13246566421388,
+     363.65809226944987,
+     504.18612847182277,
+     527.9263128649138,
+     353.43910665884266,
+     307.2209319605751,
+     805.9717878879801,
+     254.87921237169687,
+     693.4854618445742,
+     450.23037874532287,
+     530.1293024092088,
+     4093.0656444492515,
+     529.3792323563913,
+     381.25330716898736,
+     517.0676448029,
+     437.66053191883066,
+     326.95883614811083,
+     195.6652123784766,
+     201.97598151427934,
+     185.93627876455633,
+     171.1567673606813,
+     206.10751706786402,
+     232.6438462867208,
+     215.46953799280672,
+     255.53621088160168,
+     199.14426615905197,
+     239.43787466345748,
+     204.54628271957648,
+     200.40063126268674,
+     190.4471018696359,
+     195.2976256083539,
+     187.04368063438483,
+     180.65867129498565,
+     688.0470653287729,
+     720.6604138817122,
+     609.2833015279749,
+     351.1429416003914,
+     432.4644584090582,
+     508.76240509640405,
+     525.5650628398555,
+     341.9108359575504,
+     513.2349075713023,
+     370.08045677426156,
+     565.6098921327625,
+     334.5277960627644,
+     426.51484032603855,
+     1566.9120641917907,
+     422.3847160241348,
+     815.4768568274973
+    ],
+    "e_abs_err_mev_per_atom": [
+     0.7940601733142927,
+     0.5623611645786397,
+     0.49293010559647854,
+     0.34957205774599487,
+     0.3689403511177858,
+     0.08761431298864863,
+     0.4159604654176974,
+     0.0938351975268148,
+     1.0533250029043373,
+     0.3882986862127069,
+     0.6379578359370086,
+     0.12564503720380316,
+     0.5865623986860413,
+     0.04364079699037404,
+     0.49788810933382166,
+     0.09486679409853593,
+     0.14486589091955437,
+     49.081663894208205,
+     65.33194658209673,
+     39.74922336508069,
+     11.983562312488871,
+     8.360340870797067,
+     4.928323500246634,
+     396.5589368647766,
+     14.774056521910772,
+     13.141778189330822,
+     26.291940534409086,
+     43.04739666271207,
+     3.975771189679733,
+     6.675547959988037,
+     106.26479429206093,
+     6.728379903466752,
+     4.477211579208884,
+     9.330222736768867,
+     17.35317521841484,
+     3.3337750112707454,
+     9.373877982069345,
+     8.89095026517328,
+     1.5830970106858189,
+     0.007856916141690817,
+     13.115139478146519,
+     32.12144147936947,
+     11.757044535215755,
+     4.962985095899184,
+     2.754094737591012,
+     2.394564892936328,
+     1.049003909424039,
+     8.425508759113722,
+     1.9044115229345238,
+     2.1979139909227285,
+     6.303039247521625,
+     6.2917503770467675,
+     8.735952939675329,
+     6.992922101092702,
+     3.5300716285711076,
+     1.02291889509587,
+     4.671918103728245,
+     3.12127497732817,
+     4.562516333402655,
+     8.486432520893317,
+     0.536422713285134,
+     11.466671944358353,
+     2.358520221305227,
+     3.302049759902559,
+     1.301306822097314,
+     1.2115763653081626,
+     1.0013829158752843,
+     1.4178271024655311,
+     1.3836386062785602,
+     1.2487382624255114,
+     1.2936213048154361,
+     1.277273533251791,
+     6.3058407720397724,
+     5.690516326637862,
+     5.731773601510781,
+     5.892349773247929,
+     6.332984474552106,
+     6.1759721699026215,
+     6.876188478159406,
+     6.69551552122627,
+     6.763731026355302,
+     5.707307186989752,
+     5.7643669648079765,
+     5.664916438217205,
+     6.495975729336578,
+     6.119951735220397,
+     6.318225248632459,
+     5.277639338880036,
+     5.125902645914948,
+     3.365798163921241,
+     48.56534093913645,
+     15.043904148402731,
+     17.579783796325188,
+     43.16271976760788,
+     71.62404173535997,
+     48.325551570034264,
+     16.871784277903146,
+     8.666798129711495,
+     28.965674756669557,
+     65.45475453435579,
+     2.4001159230291336,
+     8.989545126500076,
+     28.500985802704548,
+     3.946539723420628,
+     4.4712378481275294,
+     2.2213353685618387,
+     8.493226828116818,
+     2.7431018634800353,
+     4.584169615446498,
+     4.0444336894776,
+     7.626406115996076,
+     3.0817463527448297,
+     1.4101579723551083,
+     7.119794933164059,
+     2.9593523757593942,
+     6.276067435297961,
+     10.451490307044509,
+     5.7283895475812585,
+     11.759193737429285,
+     1.9142671996181804,
+     5.795707126975668,
+     4.524342408529947,
+     3.912570766046925,
+     6.424755489298924,
+     6.724219754933832,
+     8.665795164054762,
+     4.964046609307649,
+     9.769367057269088,
+     4.137947469565183,
+     5.359059507824255,
+     0.08969592656171699,
+     9.165083573839816,
+     7.440255813820486,
+     5.512739714868497,
+     7.85118258699379,
+     8.69531977895227,
+     3.1874056002081375,
+     3.5887400619287746,
+     5.761049878962865,
+     11.042583173402676,
+     3.886925117962292,
+     4.913473678209712,
+     2.671354652145297,
+     7.478853394101037,
+     3.113034942888504,
+     6.026180289451233,
+     10.944036800481172,
+     6.228948126056011,
+     13.549679717428376,
+     2.4059852387186,
+     5.320067087090763,
+     2.3877640758183105,
+     11.423742037788287,
+     7.2629202945897475,
+     11.919427311870123,
+     10.753995704442687,
+     16.595387154229257,
+     6.506414514909409,
+     1.434256546714252,
+     14.292256706420758,
+     14.00628777033397,
+     6.9467176329656155,
+     12.900698191710802,
+     7.378535999574609,
+     1.0421510330367312,
+     4.286274826444725,
+     0.9751797546933005,
+     10.947201430436593,
+     17.47721449594053,
+     2.35539308224908,
+     11.947779626403587,
+     20.314125400934913,
+     3.8383542636566403,
+     22.092380541309353,
+     12.416416879650782,
+     1.8411545660708128,
+     1.5907543334545693,
+     24.01476529082025,
+     17.764587961726086,
+     1.9173176767708355,
+     13.611382400837257,
+     12.916371527543546,
+     5.382116379244906,
+     10.648791460714513,
+     37.81159094537585,
+     6.453057998839995,
+     7.1135920943729785,
+     6.055629902358869,
+     22.89547195875617,
+     6.622049835223614,
+     11.600606814533243,
+     8.739075468794352,
+     11.42310063762811,
+     11.818541323413633,
+     18.473967627507456,
+     9.4392545594541,
+     42.1973181437457,
+     6.872294322753895,
+     3.2915089397997015,
+     6.318339407115487,
+     5.631887115143286,
+     6.00685418111091,
+     4.053037734546905,
+     3.192067969362,
+     4.5114646969537375,
+     3.526856829669356,
+     1.088763169764917,
+     9.468138567205742,
+     1.2341426963864421,
+     5.915114932310672,
+     2.509246896021722,
+     5.586414842877474,
+     6.041326830260374,
+     6.047981046576112,
+     2.166926210612985,
+     8.60300004174519,
+     17.56213150351371,
+     123.80589496374483,
+     34.115358277993835,
+     33.41435928614622,
+     29.373485453521475,
+     14.642440513148003,
+     42.44177483222522,
+     530.819166964724,
+     26.900277518226545,
+     22.26647146193983,
+     59.967292829048446,
+     10.163109610974885,
+     11.332172070451563,
+     13.21464422175822,
+     29.842824666619805,
+     26.815899510324925,
+     1.6472625204357882,
+     4.094932849210619,
+     2.563949535274164,
+     1.21945819382766,
+     0.2802291880441401,
+     3.4123588431477265,
+     2.2171078497445214,
+     0.339643597257051,
+     8.663982111661047,
+     4.656307285858719,
+     6.504955085790487,
+     1.4806348228725492,
+     0.21526884159512788,
+     7.440046319923492,
+     0.8867335171666364,
+     0.28010627093627355,
+     11.472284259830893,
+     4.033483823514382,
+     79.24653953085998,
+     6.287146966497159,
+     6.722352531737753,
+     6.942700190396383,
+     6.764984738810898,
+     9.112262115360602,
+     3.7377527565438498,
+     2.5993016181389437,
+     2.8067210880361992,
+     0.6529779395721023,
+     2.30986206384774,
+     4.181229009488006,
+     8.757627779914401,
+     0.1421659206483936,
+     0.27161238073576727,
+     1.4714342576067134,
+     2.9694343219030426,
+     3.8364132585157944,
+     2.1208240759880974,
+     2.3139848129247826,
+     0.3897953861353556,
+     1.1985897705286603,
+     2.1879931141757814,
+     4.414481817899809,
+     8.634109688453387,
+     3.1134369202490046,
+     0.03183383331083355,
+     9.289693744887229,
+     17.045932556363315,
+     10.446418903779044,
+     10.102585438368628,
+     4.980568906867583,
+     8.790426575474074,
+     4.365215878233694,
+     6.632480878017254,
+     8.663909198404511,
+     17.49679947446507,
+     0.510204970228019
+    ],
+    "e_std_mev_per_atom": [
+     1.1231004498608292,
+     1.1129424451846974,
+     1.1912468828154064,
+     1.1537662129315425,
+     1.1752901808874434,
+     1.2220581162994357,
+     1.1259737630859634,
+     1.2213615936877293,
+     1.1338524286376226,
+     1.1568424486054962,
+     1.0998900505081726,
+     1.0819270760081598,
+     1.1785728367192199,
+     1.2764062693700415,
+     1.1834940777732343,
+     1.1912545581789205,
+     2.3031594062508853,
+     12.536986533326356,
+     19.755676654832154,
+     17.801432307754553,
+     1.7469942707386346,
+     5.489930045897099,
+     6.260852555015919,
+     93.75726644962752,
+     2.742257064320675,
+     14.918159160474,
+     7.086169672447328,
+     24.707410489626877,
+     3.1282034657263056,
+     4.123452615841366,
+     32.102553382884246,
+     17.01989721034709,
+     9.70245476156828,
+     29.475857314090952,
+     33.89719533455725,
+     24.280814206404017,
+     30.39523468961514,
+     32.29413718658358,
+     10.859667902813976,
+     4.961185139406243,
+     30.398715949700822,
+     41.23254101794779,
+     29.492669245848244,
+     10.91193279360011,
+     55.24133290286626,
+     18.10258894155721,
+     21.545530190832352,
+     34.6608751086243,
+     2.460993304603991,
+     2.371993619072369,
+     1.958599312451024,
+     2.736068738027558,
+     1.9690888340426518,
+     1.7575918826919386,
+     2.6305499922739033,
+     2.486975442189775,
+     2.2969848546869325,
+     2.946616746421923,
+     2.880961735414384,
+     2.5422771195707394,
+     2.2020010617011816,
+     1.9619565877181189,
+     1.9854688125254187,
+     2.411339276465811,
+     0.8247399173044366,
+     0.787328602402628,
+     0.7581187455887228,
+     0.7722995059972063,
+     0.7709136893620576,
+     0.8284315169213643,
+     0.7980891033304084,
+     0.7540526802406887,
+     2.771307987438197,
+     2.725853101614347,
+     2.6512869807894868,
+     2.760102885806207,
+     2.812930009208762,
+     2.733692366464849,
+     2.82809634977278,
+     2.748526423769216,
+     2.8394889639447776,
+     2.732114901719501,
+     2.6587403124232867,
+     2.6607417622727576,
+     2.7568015649319686,
+     2.748773454886417,
+     2.7802043141302195,
+     2.5611958390681755,
+     2.119697766795871,
+     3.964317306154694,
+     7.296662754126605,
+     9.472902610101915,
+     8.500150635635356,
+     6.680401788177905,
+     6.680234158685319,
+     3.825921669583129,
+     6.595802454047608,
+     5.416373537611574,
+     11.366831910169806,
+     8.319103178558215,
+     4.363902411941247,
+     11.420287311922086,
+     26.048892676196257,
+     4.005537427584661,
+     2.4678337996089432,
+     2.886834087986402,
+     6.549840778393197,
+     2.966079054913828,
+     2.2896200014675183,
+     3.1611091998590335,
+     5.032946539070963,
+     2.9482789212582032,
+     7.884924033049162,
+     2.635733074860359,
+     4.741897806570335,
+     7.8742757887704515,
+     7.386020381511912,
+     6.223557752405249,
+     8.501786057294337,
+     6.916718120745961,
+     3.5698953589190197,
+     1.4651439362197745,
+     2.2179836878899732,
+     4.1677912179606444,
+     3.1447703521774057,
+     5.3528091438595995,
+     2.6307650514579533,
+     5.2564442979519255,
+     4.130130227962464,
+     3.147018368812405,
+     2.761107797355292,
+     5.518407656144385,
+     5.217380028677508,
+     4.411380205510242,
+     4.372523787508723,
+     5.483118878273076,
+     9.400599934213764,
+     5.724088465524635,
+     6.314064200370733,
+     7.227324612754236,
+     4.101088065913801,
+     5.177561056557606,
+     4.516546865409743,
+     3.0776533013350535,
+     4.286205081810342,
+     4.14971275327234,
+     2.345812475636119,
+     6.532478889546141,
+     10.716138652785151,
+     5.218536320318247,
+     5.6068475230290815,
+     5.554958306861409,
+     5.074556018549877,
+     3.9661033946672464,
+     4.76574373586209,
+     6.825625327721878,
+     8.411457064098613,
+     5.39920311357745,
+     4.227159164284143,
+     2.433769573352221,
+     6.340751197787548,
+     2.171402330179172,
+     7.128152121714394,
+     8.784200535196003,
+     5.4150420073402605,
+     5.936458226474333,
+     6.485020914333961,
+     6.8221116860608335,
+     7.048506276252508,
+     6.349313904272828,
+     5.8260547920352055,
+     5.271328207099264,
+     4.303787900077644,
+     23.554823673350715,
+     7.677745068442712,
+     6.707965274592129,
+     4.566801740213936,
+     16.837235855939955,
+     5.640936655691094,
+     2.5188962611391785,
+     6.040522328522293,
+     10.536565671203675,
+     11.44291951944099,
+     6.5648546481295575,
+     17.286038155049834,
+     2.050709199324154,
+     11.068447572549212,
+     3.13885658755049,
+     17.538185231565688,
+     2.2871389600083636,
+     2.8105692913759444,
+     2.591494185356812,
+     15.641715722513075,
+     6.187098601740284,
+     17.394249333375154,
+     3.8831964782340083,
+     17.42788030156592,
+     2.4053417278508573,
+     5.776343991482836,
+     2.548260093306098,
+     2.8820431264010846,
+     2.926341210953314,
+     6.823045361691112,
+     3.903847953919594,
+     2.5477198330651407,
+     4.185888812297943,
+     4.900816753668438,
+     7.913540268396127,
+     3.167107260817827,
+     7.695069856610312,
+     3.965675508010344,
+     0.8691856174987621,
+     2.107210202440059,
+     4.424162975155739,
+     4.13524684198663,
+     13.737359068281055,
+     9.88629275121697,
+     7.34415191536124,
+     9.783345476332038,
+     20.549986918988743,
+     27.895729241996307,
+     13.042861112126587,
+     34.39847022344736,
+     56.414910857197434,
+     2.8646172026316847,
+     14.460978204553063,
+     12.768973353915023,
+     10.184617097952172,
+     20.991443511100034,
+     9.870945285941591,
+     9.61388118308399,
+     10.131419799669132,
+     5.382042435883548,
+     2.5078529636863114,
+     3.4263343036724185,
+     4.367892023546499,
+     5.426745026347225,
+     3.4257172981507797,
+     4.551875217421231,
+     6.657527500946148,
+     6.358413779616614,
+     6.069528671253831,
+     8.037779013109521,
+     6.3499981032845145,
+     7.810309459819017,
+     10.67061787114149,
+     7.627524696336258,
+     8.073367252872691,
+     6.894417279213623,
+     9.468422571863377,
+     24.000865302599703,
+     8.129166540472317,
+     7.3287567574549435,
+     5.836331004314172,
+     8.753833430745475,
+     11.05587589181146,
+     6.915511280641584,
+     3.3913008834351044,
+     4.273318465682837,
+     9.959170697664879,
+     9.605759458715577,
+     5.748373079343531,
+     7.583658132805165,
+     7.310552075328053,
+     5.577802586503894,
+     7.451366830319276,
+     7.684814439133773,
+     7.133701464507046,
+     5.539707778119845,
+     6.841784886204866,
+     6.138576420817869,
+     7.861553255429678,
+     11.894822604866066,
+     12.54840446527807,
+     7.191249508211683,
+     14.351013899113154,
+     10.555337804009731,
+     6.6477726373115065,
+     7.558433363655866,
+     13.462085732535208,
+     7.980067330271507,
+     9.277633191748889,
+     12.87052076862841,
+     7.857405612567625,
+     11.952114439678262,
+     13.066832976056261,
+     9.908646867992795,
+     10.248872936057875
+    ]
+   },
+   "oracle_calls": 0,
+   "strategy": "random",
+   "seed": 0,
+   "wall_seconds": 671.1341409000161
+  }
+ ],
+ "wall_seconds": 675.9198791999952
+}

@@ -1,0 +1,1981 @@
+{
+ "config": {
+  "name": "fast",
+  "kind": "al",
+  "dataset": "data/sample_frames.extxyz",
+  "seeds": [
+   0
+  ],
+  "strategies": [
+   "committee",
+   "random"
+  ],
+  "n_members": 3,
+  "hidden": [
+   8
+  ],
+  "n_init": 24,
+  "round_size": 12,
+  "n_rounds": 3,
+  "chunk_size": 48,
+  "train": {
+   "epochs": 25,
+   "batch_size": 12,
+   "lr": 0.003,
+   "force_weight": 0.1,
+   "target_frame_epochs": 4000,
+   "max_epochs": 100
+  },
+  "split": {
+   "holdout_compositions": [
+    "Ti2ZrNb",
+    "TiZrNb2"
+   ],
+   "test_fraction": 0.2,
+   "seed": 20260809
+  },
+  "out": "results/fast_demo.json"
+ },
+ "n_pool": 166,
+ "n_test": 56,
+ "n_transfer": 56,
+ "pool_kind_fractions": {
+  "rattle14": 0.24096385542168675,
+  "rattle20": 0.12048192771084337,
+  "rattle28": 0.30120481927710846,
+  "strain_shear": 0.24096385542168675,
+  "strain_vol": 0.0963855421686747
+ },
+ "pool_composition_fractions": {
+  "Nb": 0.21686746987951808,
+  "Ti": 0.12048192771084337,
+  "TiNb": 0.2289156626506024,
+  "TiZr": 0.0963855421686747,
+  "TiZrNb": 0.1686746987951807,
+  "Zr": 0.060240963855421686,
+  "ZrNb": 0.10843373493975904
+ },
+ "runs": [
+  {
+   "settings": {
+    "strategy": "committee",
+    "n_members": 3,
+    "hidden": [
+     8
+    ],
+    "n_init": 24,
+    "round_size": 12,
+    "n_rounds": 3,
+    "seed": 0,
+    "train": {
+     "epochs": 25,
+     "batch_size": 12,
+     "lr": 0.003,
+     "force_weight": 0.1,
+     "lr_min_factor": 0.05,
+     "seed": 0,
+     "target_frame_epochs": 4000,
+     "max_epochs": 100
+    },
+    "explore": false,
+    "group_cap": 4
+   },
+   "rounds": [
+    {
+     "round": 0,
+     "budget": 24,
+     "train_seconds": 36.528895600000396,
+     "member_final_losses": [
+      0.041860635591993406,
+      0.034122741014930943,
+      0.035576160688171175
+     ],
+     "epochs_used": 100,
+     "metrics": {
+      "test": {
+       "e_mae_mev_per_atom": 86.49860636720108,
+       "e_rmse_mev_per_atom": 178.7231635995647,
+       "f_mae_mev_per_a": 281.9727958544884,
+       "f_rmse_mev_per_a": 870.4969087813924,
+       "n_structures": 56
+      },
+      "transfer": {
+       "e_mae_mev_per_atom": 50.07526830527601,
+       "e_rmse_mev_per_atom": 101.76311679890912,
+       "f_mae_mev_per_a": 369.75195189570485,
+       "f_rmse_mev_per_a": 985.5833869658245,
+       "n_structures": 56
+      }
+     },
+     "eval_seconds": 0.5691867000423372,
+     "select_seconds": 0.9943025999818929,
+     "selected": [
+      {
+       "index": 153,
+       "group": "TiZrNb_rattle28_b1",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 2.1963534375886993
+      },
+      {
+       "index": 47,
+       "group": "Nb_rattle28_b1",
+       "composition": "Nb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.97540172533328
+      },
+      {
+       "index": 105,
+       "group": "TiNb_rattle28_b1",
+       "composition": "TiNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.942667051043295
+      },
+      {
+       "index": 22,
+       "group": "Zr_rattle28_b0",
+       "composition": "Zr",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.8037467663277595
+      },
+      {
+       "index": 45,
+       "group": "Nb_rattle28_b1",
+       "composition": "Nb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.7103801047004477
+      },
+      {
+       "index": 155,
+       "group": "TiZrNb_rattle28_b1",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.574548039898124
+      },
+      {
+       "index": 149,
+       "group": "TiZrNb_rattle28_b1",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.5742677690169617
+      },
+      {
+       "index": 156,
+       "group": "TiZrNb_rattle28_b1",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.568905104418461
+      },
+      {
+       "index": 104,
+       "group": "TiNb_rattle28_b1",
+       "composition": "TiNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.5062075558075969
+      },
+      {
+       "index": 20,
+       "group": "Zr_rattle28_b0",
+       "composition": "Zr",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.48828803145049143
+      },
+      {
+       "index": 142,
+       "group": "TiZrNb_rattle28_b0",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.4425544278958305
+      },
+      {
+       "index": 140,
+       "group": "TiZrNb_rattle28_b0",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.40539065274699954
+      }
+     ]
+    },
+    {
+     "round": 1,
+     "budget": 36,
+     "train_seconds": 45.767137599992566,
+     "member_final_losses": [
+      0.10712168760478658,
+      0.11177704231166379,
+      0.10969278628250034
+     ],
+     "epochs_used": 100,
+     "metrics": {
+      "test": {
+       "e_mae_mev_per_atom": 45.109310709308126,
+       "e_rmse_mev_per_atom": 71.09430380945244,
+       "f_mae_mev_per_a": 243.2063270974063,
+       "f_rmse_mev_per_a": 625.6443478629942,
+       "n_structures": 56
+      },
+      "transfer": {
+       "e_mae_mev_per_atom": 106.2773938983925,
+       "e_rmse_mev_per_atom": 123.04271916113332,
+       "f_mae_mev_per_a": 366.3552669940787,
+       "f_rmse_mev_per_a": 715.6520828012912,
+       "n_structures": 56
+      }
+     },
+     "eval_seconds": 0.5676130999927409,
+     "select_seconds": 0.5759688999969512,
+     "selected": [
+      {
+       "index": 107,
+       "group": "TiNb_rattle28_b1",
+       "composition": "TiNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.5926101295998842
+      },
+      {
+       "index": 106,
+       "group": "TiNb_rattle28_b1",
+       "composition": "TiNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.4510222148220324
+      },
+      {
+       "index": 150,
+       "group": "TiZrNb_rattle28_b1",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.35823151514005486
+      },
+      {
+       "index": 44,
+       "group": "Nb_rattle28_b1",
+       "composition": "Nb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.35686101717623003
+      },
+      {
+       "index": 151,
+       "group": "TiZrNb_rattle28_b1",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.35414535780980455
+      },
+      {
+       "index": 152,
+       "group": "TiZrNb_rattle28_b1",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.3527798647986568
+      },
+      {
+       "index": 42,
+       "group": "Nb_rattle28_b1",
+       "composition": "Nb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.3504285177371548
+      },
+      {
+       "index": 154,
+       "group": "TiZrNb_rattle28_b1",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.34097630963896003
+      },
+      {
+       "index": 144,
+       "group": "TiZrNb_rattle28_b0",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.33515799248303174
+      },
+      {
+       "index": 39,
+       "group": "Nb_rattle14_b1",
+       "composition": "Nb",
+       "kind": "rattle14",
+       "n_atoms": 16,
+       "score": 0.3343720098930448
+      },
+      {
+       "index": 146,
+       "group": "TiZrNb_rattle28_b0",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.3338274357904796
+      },
+      {
+       "index": 138,
+       "group": "TiZrNb_rattle28_b0",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.3278830556311866
+      }
+     ]
+    },
+    {
+     "round": 2,
+     "budget": 48,
+     "train_seconds": 51.50300729996525,
+     "member_final_losses": [
+      0.45527429153023236,
+      0.4602664362087207,
+      0.467056828347688
+     ],
+     "epochs_used": 83,
+     "metrics": {
+      "test": {
+       "e_mae_mev_per_atom": 72.68768882203032,
+       "e_rmse_mev_per_atom": 117.7057881299249,
+       "f_mae_mev_per_a": 257.51805303689287,
+       "f_rmse_mev_per_a": 603.9209534906831,
+       "n_structures": 56
+      },
+      "transfer": {
+       "e_mae_mev_per_atom": 93.99179749090413,
+       "e_rmse_mev_per_atom": 136.31273847876545,
+       "f_mae_mev_per_a": 421.7499955586231,
+       "f_rmse_mev_per_a": 752.2976550217427,
+       "n_structures": 56
+      }
+     },
+     "eval_seconds": 0.5833444999880157,
+     "select_seconds": 0.6913517999928445,
+     "selected": [
+      {
+       "index": 102,
+       "group": "TiNb_rattle28_b1",
+       "composition": "TiNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.7536377216320862
+      },
+      {
+       "index": 110,
+       "group": "TiNb_rattle28_b1",
+       "composition": "TiNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.7378779225931285
+      },
+      {
+       "index": 109,
+       "group": "TiNb_rattle28_b1",
+       "composition": "TiNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.7249417845062276
+      },
+      {
+       "index": 111,
+       "group": "TiNb_rattle28_b1",
+       "composition": "TiNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.6916568647214191
+      },
+      {
+       "index": 99,
+       "group": "TiNb_rattle20_b0",
+       "composition": "TiNb",
+       "kind": "rattle20",
+       "n_atoms": 16,
+       "score": 0.6862659463197018
+      },
+      {
+       "index": 48,
+       "group": "Nb_rattle28_b1",
+       "composition": "Nb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.6832616190732018
+      },
+      {
+       "index": 46,
+       "group": "Nb_rattle28_b1",
+       "composition": "Nb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.6234522098584713
+      },
+      {
+       "index": 41,
+       "group": "Nb_rattle28_b1",
+       "composition": "Nb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.6132436940600873
+      },
+      {
+       "index": 108,
+       "group": "TiNb_rattle28_b1",
+       "composition": "TiNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": 0.591458423523932
+      },
+      {
+       "index": 38,
+       "group": "Nb_rattle14_b1",
+       "composition": "Nb",
+       "kind": "rattle14",
+       "n_atoms": 16,
+       "score": 0.5577032857319714
+      },
+      {
+       "index": 97,
+       "group": "TiNb_rattle20_b0",
+       "composition": "TiNb",
+       "kind": "rattle20",
+       "n_atoms": 16,
+       "score": 0.5554471247021763
+      },
+      {
+       "index": 34,
+       "group": "Nb_rattle14_b1",
+       "composition": "Nb",
+       "kind": "rattle14",
+       "n_atoms": 16,
+       "score": 0.5507564171875784
+      }
+     ]
+    },
+    {
+     "round": 3,
+     "budget": 60,
+     "train_seconds": 51.42399989999831,
+     "member_final_losses": [
+      0.4425733532587791,
+      0.4215566395909113,
+      0.41889238877711393
+     ],
+     "epochs_used": 67,
+     "metrics": {
+      "test": {
+       "e_mae_mev_per_atom": 52.30665502657072,
+       "e_rmse_mev_per_atom": 81.27591325882067,
+       "f_mae_mev_per_a": 253.26932687144256,
+       "f_rmse_mev_per_a": 613.0574264630427,
+       "n_structures": 56
+      },
+      "transfer": {
+       "e_mae_mev_per_atom": 65.91356452173942,
+       "e_rmse_mev_per_atom": 103.54476959336858,
+       "f_mae_mev_per_a": 366.6718169408993,
+       "f_rmse_mev_per_a": 711.9940176767835,
+       "n_structures": 56
+      }
+     },
+     "eval_seconds": 0.6383311999961734
+    }
+   ],
+   "initial_purchase": [
+    {
+     "index": 24,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 0,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 163,
+     "group": "TiZrNb_strain_shear_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 103,
+     "group": "TiNb_rattle28_b1",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 95,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 19,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 122,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 27,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 133,
+     "group": "ZrNb_strain_shear_b0",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 94,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 59,
+     "group": "Nb_strain_shear_b1",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 8,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 93,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 84,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 139,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 141,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 40,
+     "group": "Nb_rattle28_b1",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 101,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 86,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 56,
+     "group": "Nb_strain_shear_b0",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 157,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 120,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 91,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 11,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    }
+   ],
+   "calibration": {
+    "f_rmse_mev_per_a": [
+     203.3691289433347,
+     206.87816062564224,
+     232.64567086623993,
+     217.85369808226162,
+     210.5742693045748,
+     210.6300231557177,
+     141.82439853394925,
+     190.58926911383227,
+     171.67687681991444,
+     158.8031597932875,
+     1354.0123722445658,
+     2478.371710040784,
+     561.1818143213683,
+     679.9099369619103,
+     957.0345940384226,
+     3143.4884106346935,
+     694.2235662477121,
+     1576.908213288429,
+     2801.1849952742127,
+     828.4617481569599,
+     319.87586616396254,
+     60.30046524065062,
+     206.41467612469785,
+     75.0154934623204,
+     277.2201476978694,
+     64.37946909610194,
+     51.430960925757226,
+     62.66758045977099,
+     311.41264401779887,
+     320.872227656486,
+     260.9651605001823,
+     269.71797704048066,
+     252.67544321942015,
+     251.0734055236195,
+     297.6469532704632,
+     180.04983738753828,
+     310.3636381149979,
+     342.7760852500126,
+     184.93760932805284,
+     185.8539377044049,
+     190.81713294284668,
+     171.04290343166426,
+     179.41946430973198,
+     162.88040447039964,
+     148.37160059053198,
+     179.30301818914353,
+     288.0563186062718,
+     384.67129940063506,
+     429.4346035698877,
+     316.328639758932,
+     446.4333733541593,
+     389.36711369390645,
+     451.43268068641373,
+     365.91859450227577,
+     235.83989453682466,
+     422.77001877927484
+    ],
+    "f_mae_mev_per_a": [
+     163.65966892264854,
+     176.47086194463733,
+     196.50042637241293,
+     184.50914812077147,
+     165.5261027527308,
+     159.97294826609252,
+     112.93951680123497,
+     140.85784648758778,
+     133.84594403328987,
+     126.99688353603881,
+     832.0913108856819,
+     1792.5177168840942,
+     455.5252134737539,
+     535.0921638624092,
+     737.2418551800216,
+     1808.3671355488443,
+     515.5149026625995,
+     1224.2187588104614,
+     1960.942802945335,
+     592.515610505956,
+     252.98852635291823,
+     46.99384655791514,
+     167.15912962160346,
+     61.37433107292284,
+     220.52110381765047,
+     53.582319743424385,
+     42.2436679017346,
+     49.23695455817271,
+     252.18883330416324,
+     266.37560629983113,
+     217.16077792570485,
+     185.8091727696554,
+     192.3717734415061,
+     203.37382885705657,
+     228.95540513850224,
+     153.1230433600041,
+     198.74796093220982,
+     289.6023371757032,
+     146.26945659013913,
+     141.00738178089014,
+     144.61754288510332,
+     131.85122582241394,
+     138.48156688904348,
+     130.4190754682966,
+     101.33734713874657,
+     146.8304944312403,
+     234.42417654852434,
+     295.99752387437195,
+     323.3517974808166,
+     264.2801056500027,
+     341.89147912479564,
+     310.62822472957413,
+     329.32022387652154,
+     312.2883831521272,
+     179.01617307605503,
+     347.7684303181441
+    ],
+    "disagreement_mean_mev_per_a": [
+     126.35446732053695,
+     128.27347414335517,
+     133.12798693266748,
+     133.9580296691149,
+     138.004557329782,
+     133.01197870410428,
+     122.0111276699205,
+     126.60110318903553,
+     138.36297194713185,
+     129.7417893579421,
+     432.9682632413225,
+     471.17177967341814,
+     327.5054163168185,
+     302.3200395448707,
+     346.80789777624267,
+     393.1063819920479,
+     396.9834217805652,
+     318.6618966255692,
+     348.659544131402,
+     259.1274551320543,
+     119.95806037033043,
+     65.45291860620193,
+     94.31388083834977,
+     58.06150815884174,
+     108.75018269114314,
+     64.0875142934373,
+     63.22573502057322,
+     48.74742111843674,
+     240.78689373227982,
+     243.64910772377158,
+     205.18190261603294,
+     218.99323243306284,
+     149.73929777750755,
+     273.8645384979624,
+     223.66538446419645,
+     235.22438790521343,
+     223.34928303475203,
+     271.5185519191499,
+     214.51509500182198,
+     196.92295293143945,
+     191.7186682095539,
+     209.68764363646534,
+     207.65867155866152,
+     197.06392595553234,
+     197.6153654382725,
+     197.95427419751573,
+     237.58457035703134,
+     309.90128532794625,
+     339.5122891457889,
+     291.4783182707552,
+     301.2441726339021,
+     330.3188876489273,
+     218.39935201993103,
+     267.44891388308565,
+     213.58043088869283,
+     255.33605063147914
+    ],
+    "disagreement_max_mev_per_a": [
+     221.37977262383234,
+     234.7401965174453,
+     243.3005799113231,
+     256.60337427352783,
+     220.78245062272288,
+     279.5792701751804,
+     239.83623400158712,
+     234.68575603491604,
+     272.865861042211,
+     176.9594551452856,
+     875.4863378541576,
+     1391.4309557904608,
+     511.43214009160164,
+     644.086333305879,
+     557.0733054290434,
+     951.625379974215,
+     710.124442013245,
+     673.4023332688326,
+     719.7698379629425,
+     498.4649007555256,
+     236.54866388307462,
+     109.92134470960443,
+     176.4164775373232,
+     119.34470111481768,
+     234.35498902036008,
+     115.7350655395332,
+     113.6029800919515,
+     93.15562721339079,
+     391.82908626227083,
+     473.1979109397329,
+     485.41758264804366,
+     609.8128580449669,
+     277.15188743487323,
+     510.71924648409515,
+     460.80304275741696,
+     532.976072387891,
+     556.5214669107199,
+     492.05026416550254,
+     404.8279013481793,
+     330.14772158622804,
+     345.9469957136603,
+     412.11796759882446,
+     383.4458281743069,
+     328.9128569458915,
+     354.2402191478633,
+     372.2071291051256,
+     400.5795050977886,
+     740.3598433630315,
+     586.0671495500413,
+     527.0377510917739,
+     574.9647586039374,
+     776.0155834369964,
+     338.093587605278,
+     441.72271615737526,
+     463.4102965127973,
+     488.17994575960194
+    ],
+    "e_abs_err_mev_per_atom": [
+     5.555104940372146,
+     2.97011947853143,
+     2.746473195420762,
+     1.804198939931112,
+     6.649010495999974,
+     7.0315662708662074,
+     9.75535760399282,
+     4.477611022148054,
+     1.237587289972808,
+     6.27142967268135,
+     33.25674860330885,
+     152.67629090126354,
+     40.74780106245335,
+     65.20739670731501,
+     9.19711727139827,
+     97.00329090065551,
+     70.3189923530676,
+     95.25721202647297,
+     191.62264076006784,
+     2.607793937205116,
+     273.66566113719125,
+     23.779432536779648,
+     212.72784403241843,
+     71.23613556459068,
+     254.86699962181936,
+     47.853565126118795,
+     64.031440105543,
+     76.4665555940593,
+     95.84874244298369,
+     103.67142949606212,
+     77.95303919147045,
+     98.27479407965534,
+     12.828489993081504,
+     2.8708131180046337,
+     45.7220865280199,
+     22.539856536694103,
+     117.08157429321453,
+     82.82877940545852,
+     13.277476847339063,
+     12.849342863083384,
+     15.19137871764542,
+     16.302520258832416,
+     11.48260890631213,
+     17.455815674975593,
+     13.410923614404483,
+     17.92120522612482,
+     21.987237271538618,
+     50.78546216795132,
+     72.7376402054869,
+     21.16612221177938,
+     9.130902471852664,
+     50.698973501582145,
+     44.38836557979897,
+     0.22463864772070963,
+     42.63109402027432,
+     6.889991064968015
+    ],
+    "e_std_mev_per_atom": [
+     32.43129453096014,
+     33.43599222964417,
+     30.86450669536889,
+     30.198338234856593,
+     29.43871948695401,
+     30.257509811061464,
+     32.03452397995527,
+     30.291862383713575,
+     27.808034030127352,
+     34.58557897091065,
+     13.227189864954294,
+     20.99993813623264,
+     6.676633653984668,
+     8.358584079316143,
+     7.416796538553957,
+     25.349536278823223,
+     6.614596106842318,
+     20.228045936199397,
+     21.057346155415274,
+     32.74420984643407,
+     129.61600165372087,
+     115.87902869318515,
+     125.71587889663843,
+     53.298012460033426,
+     129.3624018611537,
+     20.47865037916862,
+     214.7831144804266,
+     61.26959004516661,
+     14.055374347061063,
+     14.971242738021445,
+     11.567665522470856,
+     17.851653470316183,
+     7.805447169808166,
+     2.1512416606107783,
+     11.23912955577589,
+     11.090726489818804,
+     14.83282950633787,
+     9.183057517900242,
+     25.48352133511695,
+     23.107929339433596,
+     20.128407252343038,
+     24.46348847968481,
+     28.092182902072746,
+     19.3322099038206,
+     24.814740535914986,
+     18.617280870764123,
+     17.741269909347217,
+     10.670439395895494,
+     34.99975637847734,
+     9.327357130962652,
+     20.25741463786872,
+     3.630585753545936,
+     6.1749764553323185,
+     8.213402065688863,
+     6.41814277430089,
+     5.982162857360273
+    ]
+   },
+   "oracle_calls": 0,
+   "strategy": "committee",
+   "seed": 0,
+   "wall_seconds": 189.88570750004146
+  },
+  {
+   "settings": {
+    "strategy": "random",
+    "n_members": 3,
+    "hidden": [
+     8
+    ],
+    "n_init": 24,
+    "round_size": 12,
+    "n_rounds": 3,
+    "seed": 0,
+    "train": {
+     "epochs": 25,
+     "batch_size": 12,
+     "lr": 0.003,
+     "force_weight": 0.1,
+     "lr_min_factor": 0.05,
+     "seed": 0,
+     "target_frame_epochs": 4000,
+     "max_epochs": 100
+    },
+    "explore": false,
+    "group_cap": 4
+   },
+   "rounds": [
+    {
+     "round": 0,
+     "budget": 24,
+     "train_seconds": 28.894145100028254,
+     "member_final_losses": [
+      0.041860635591993406,
+      0.034122741014930943,
+      0.035576160688171175
+     ],
+     "epochs_used": 100,
+     "metrics": {
+      "test": {
+       "e_mae_mev_per_atom": 86.49860636720108,
+       "e_rmse_mev_per_atom": 178.7231635995647,
+       "f_mae_mev_per_a": 281.9727958544884,
+       "f_rmse_mev_per_a": 870.4969087813924,
+       "n_structures": 56
+      },
+      "transfer": {
+       "e_mae_mev_per_atom": 50.07526830527601,
+       "e_rmse_mev_per_atom": 101.76311679890912,
+       "f_mae_mev_per_a": 369.75195189570485,
+       "f_rmse_mev_per_a": 985.5833869658245,
+       "n_structures": 56
+      }
+     },
+     "eval_seconds": 0.8386557000339963,
+     "select_seconds": 7.720000576227903e-05,
+     "selected": [
+      {
+       "index": 108,
+       "group": "TiNb_rattle28_b1",
+       "composition": "TiNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 140,
+       "group": "TiZrNb_rattle28_b0",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 78,
+       "group": "TiZr_strain_vol_b1",
+       "composition": "TiZr",
+       "kind": "strain_vol",
+       "n_atoms": 54,
+       "score": null
+      },
+      {
+       "index": 127,
+       "group": "ZrNb_rattle14_b1",
+       "composition": "ZrNb",
+       "kind": "rattle14",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 119,
+       "group": "TiNb_strain_vol_b1",
+       "composition": "TiNb",
+       "kind": "strain_vol",
+       "n_atoms": 54,
+       "score": null
+      },
+      {
+       "index": 72,
+       "group": "TiZr_strain_shear_b0",
+       "composition": "TiZr",
+       "kind": "strain_shear",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 74,
+       "group": "TiZr_strain_vol_b1",
+       "composition": "TiZr",
+       "kind": "strain_vol",
+       "n_atoms": 54,
+       "score": null
+      },
+      {
+       "index": 20,
+       "group": "Zr_rattle28_b0",
+       "composition": "Zr",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 12,
+       "group": "Ti_rattle20_b0",
+       "composition": "Ti",
+       "kind": "rattle20",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 43,
+       "group": "Nb_rattle28_b1",
+       "composition": "Nb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 37,
+       "group": "Nb_rattle14_b1",
+       "composition": "Nb",
+       "kind": "rattle14",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 147,
+       "group": "TiZrNb_rattle28_b0",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": null
+      }
+     ]
+    },
+    {
+     "round": 1,
+     "budget": 36,
+     "train_seconds": 46.02490270003909,
+     "member_final_losses": [
+      0.03387878210397744,
+      0.03085621049177002,
+      0.03243957277882819
+     ],
+     "epochs_used": 100,
+     "metrics": {
+      "test": {
+       "e_mae_mev_per_atom": 46.81735849958951,
+       "e_rmse_mev_per_atom": 100.25394422822417,
+       "f_mae_mev_per_a": 251.76331163404947,
+       "f_rmse_mev_per_a": 778.5243323064533,
+       "n_structures": 56
+      },
+      "transfer": {
+       "e_mae_mev_per_atom": 35.525613487099506,
+       "e_rmse_mev_per_atom": 54.8334201243507,
+       "f_mae_mev_per_a": 333.2810440300783,
+       "f_rmse_mev_per_a": 854.6663399787088,
+       "n_structures": 56
+      }
+     },
+     "eval_seconds": 0.6967072000261396,
+     "select_seconds": 0.00010730000212788582,
+     "selected": [
+      {
+       "index": 100,
+       "group": "TiNb_rattle20_b0",
+       "composition": "TiNb",
+       "kind": "rattle20",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 116,
+       "group": "TiNb_strain_vol_b1",
+       "composition": "TiNb",
+       "kind": "strain_vol",
+       "n_atoms": 54,
+       "score": null
+      },
+      {
+       "index": 90,
+       "group": "TiNb_rattle14_b1",
+       "composition": "TiNb",
+       "kind": "rattle14",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 15,
+       "group": "Ti_rattle20_b0",
+       "composition": "Ti",
+       "kind": "rattle20",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 105,
+       "group": "TiNb_rattle28_b1",
+       "composition": "TiNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 134,
+       "group": "ZrNb_strain_shear_b0",
+       "composition": "ZrNb",
+       "kind": "strain_shear",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 145,
+       "group": "TiZrNb_rattle28_b0",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 50,
+       "group": "Nb_strain_shear_b0",
+       "composition": "Nb",
+       "kind": "strain_shear",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 17,
+       "group": "Ti_rattle20_b0",
+       "composition": "Ti",
+       "kind": "rattle20",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 68,
+       "group": "TiZr_strain_shear_b0",
+       "composition": "TiZr",
+       "kind": "strain_shear",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 160,
+       "group": "TiZrNb_strain_shear_b1",
+       "composition": "TiZrNb",
+       "kind": "strain_shear",
+       "n_atoms": 54,
+       "score": null
+      },
+      {
+       "index": 54,
+       "group": "Nb_strain_shear_b0",
+       "composition": "Nb",
+       "kind": "strain_shear",
+       "n_atoms": 16,
+       "score": null
+      }
+     ]
+    },
+    {
+     "round": 2,
+     "budget": 48,
+     "train_seconds": 48.04269919998478,
+     "member_final_losses": [
+      0.029327719176227826,
+      0.025731655317193618,
+      0.027342717565357874
+     ],
+     "epochs_used": 83,
+     "metrics": {
+      "test": {
+       "e_mae_mev_per_atom": 55.62556373733381,
+       "e_rmse_mev_per_atom": 114.57615796088031,
+       "f_mae_mev_per_a": 231.71609306556508,
+       "f_rmse_mev_per_a": 698.5336233819564,
+       "n_structures": 56
+      },
+      "transfer": {
+       "e_mae_mev_per_atom": 37.016289149342924,
+       "e_rmse_mev_per_atom": 54.93984177332632,
+       "f_mae_mev_per_a": 321.374128631902,
+       "f_rmse_mev_per_a": 803.9897603123252,
+       "n_structures": 56
+      }
+     },
+     "eval_seconds": 0.5073076999979094,
+     "select_seconds": 8.410000009462237e-05,
+     "selected": [
+      {
+       "index": 45,
+       "group": "Nb_rattle28_b1",
+       "composition": "Nb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 111,
+       "group": "TiNb_rattle28_b1",
+       "composition": "TiNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 36,
+       "group": "Nb_rattle14_b1",
+       "composition": "Nb",
+       "kind": "rattle14",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 53,
+       "group": "Nb_strain_shear_b0",
+       "composition": "Nb",
+       "kind": "strain_shear",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 131,
+       "group": "ZrNb_strain_shear_b0",
+       "composition": "ZrNb",
+       "kind": "strain_shear",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 58,
+       "group": "Nb_strain_shear_b1",
+       "composition": "Nb",
+       "kind": "strain_shear",
+       "n_atoms": 54,
+       "score": null
+      },
+      {
+       "index": 63,
+       "group": "Nb_strain_shear_b1",
+       "composition": "Nb",
+       "kind": "strain_shear",
+       "n_atoms": 54,
+       "score": null
+      },
+      {
+       "index": 153,
+       "group": "TiZrNb_rattle28_b1",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 2,
+       "group": "Ti_rattle14_b0",
+       "composition": "Ti",
+       "kind": "rattle14",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 28,
+       "group": "Zr_rattle28_b0",
+       "composition": "Zr",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 146,
+       "group": "TiZrNb_rattle28_b0",
+       "composition": "TiZrNb",
+       "kind": "rattle28",
+       "n_atoms": 16,
+       "score": null
+      },
+      {
+       "index": 82,
+       "group": "TiNb_rattle14_b1",
+       "composition": "TiNb",
+       "kind": "rattle14",
+       "n_atoms": 16,
+       "score": null
+      }
+     ]
+    },
+    {
+     "round": 3,
+     "budget": 60,
+     "train_seconds": 50.230925099982414,
+     "member_final_losses": [
+      0.04583137514437452,
+      0.04901229531644155,
+      0.04849510043816237
+     ],
+     "epochs_used": 67,
+     "metrics": {
+      "test": {
+       "e_mae_mev_per_atom": 45.8575440056831,
+       "e_rmse_mev_per_atom": 93.46876631850135,
+       "f_mae_mev_per_a": 230.59530546855692,
+       "f_rmse_mev_per_a": 641.6932627019072,
+       "n_structures": 56
+      },
+      "transfer": {
+       "e_mae_mev_per_atom": 50.30524737866277,
+       "e_rmse_mev_per_atom": 68.71660993806461,
+       "f_mae_mev_per_a": 341.1740316928771,
+       "f_rmse_mev_per_a": 801.4620618301387,
+       "n_structures": 56
+      }
+     },
+     "eval_seconds": 0.5169307999894954
+    }
+   ],
+   "initial_purchase": [
+    {
+     "index": 24,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 0,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 163,
+     "group": "TiZrNb_strain_shear_b1",
+     "composition": "TiZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 103,
+     "group": "TiNb_rattle28_b1",
+     "composition": "TiNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 95,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 19,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 122,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 27,
+     "group": "Zr_rattle28_b0",
+     "composition": "Zr",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 133,
+     "group": "ZrNb_strain_shear_b0",
+     "composition": "ZrNb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 94,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 59,
+     "group": "Nb_strain_shear_b1",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 54
+    },
+    {
+     "index": 8,
+     "group": "Ti_rattle14_b0",
+     "composition": "Ti",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 93,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 84,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 139,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 141,
+     "group": "TiZrNb_rattle28_b0",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 40,
+     "group": "Nb_rattle28_b1",
+     "composition": "Nb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 101,
+     "group": "TiNb_rattle20_b0",
+     "composition": "TiNb",
+     "kind": "rattle20",
+     "n_atoms": 16
+    },
+    {
+     "index": 86,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 56,
+     "group": "Nb_strain_shear_b0",
+     "composition": "Nb",
+     "kind": "strain_shear",
+     "n_atoms": 16
+    },
+    {
+     "index": 157,
+     "group": "TiZrNb_rattle28_b1",
+     "composition": "TiZrNb",
+     "kind": "rattle28",
+     "n_atoms": 16
+    },
+    {
+     "index": 120,
+     "group": "ZrNb_rattle14_b1",
+     "composition": "ZrNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 91,
+     "group": "TiNb_rattle14_b1",
+     "composition": "TiNb",
+     "kind": "rattle14",
+     "n_atoms": 16
+    },
+    {
+     "index": 11,
+     "group": "Ti_rattle20_b0",
+     "composition": "Ti",
+     "kind": "rattle20",
+     "n_atoms": 16
+    }
+   ],
+   "calibration": {
+    "f_rmse_mev_per_a": [
+     151.481955524883,
+     121.97988160267869,
+     154.78470707565202,
+     152.69659664185045,
+     144.3106314984123,
+     129.0630476640566,
+     110.2723909487515,
+     136.30399874319258,
+     128.48421612892926,
+     122.70676521745074,
+     1328.3842494032324,
+     1869.2169954145209,
+     627.6312708177456,
+     490.7954276426212,
+     1128.4110951359344,
+     3247.210629240536,
+     810.5274428748457,
+     1765.4503257428603,
+     3495.7162985714444,
+     848.7826164432472,
+     458.78288516613947,
+     63.77524352636346,
+     334.5303580978544,
+     64.01100362747104,
+     405.7238776115143,
+     58.5540113858473,
+     52.06250468152742,
+     41.43274541875128,
+     134.44071550855605,
+     142.58818804519353,
+     106.72805705905759,
+     115.14527347457127,
+     118.1808060370382,
+     113.99673862301803,
+     124.63967464775203,
+     80.11011407930161,
+     117.46552670350944,
+     134.4729073411815,
+     102.17550394661195,
+     90.56689445564626,
+     81.58785493066195,
+     88.90237596887128,
+     90.24041368048934,
+     87.8896801262991,
+     86.78257591211586,
+     83.48331154039303,
+     263.6828922684194,
+     554.924564427609,
+     464.15198980363647,
+     258.9894925989696,
+     503.845712509677,
+     622.936107899326,
+     548.7771786870491,
+     275.56743208450973,
+     264.63357564903856,
+     539.5248483514091
+    ],
+    "f_mae_mev_per_a": [
+     103.09874201899322,
+     94.72568590727292,
+     114.47927931151563,
+     125.07431695361177,
+     107.0045111017306,
+     97.53882111420592,
+     84.74849490286265,
+     104.06827258839687,
+     102.15661803952453,
+     99.24636179336133,
+     911.556370595227,
+     1382.0270351031036,
+     517.7258499670025,
+     383.36881910173565,
+     880.5599754123275,
+     1877.766864880049,
+     600.4903594687293,
+     1361.086963362499,
+     2290.3434084663286,
+     635.7869189414043,
+     363.2602857173244,
+     48.92911121945676,
+     264.23322921949074,
+     51.84976179569399,
+     323.17072048431106,
+     47.793127175691346,
+     43.168089542968396,
+     34.50765617231316,
+     113.3835890132165,
+     118.93636563921979,
+     88.64377530966738,
+     76.24271672746431,
+     91.20285459198672,
+     92.66900092543149,
+     98.1218459381779,
+     64.34912580730439,
+     78.33736071931556,
+     112.21105527763525,
+     82.53040705724494,
+     72.28173494721082,
+     66.35046951583874,
+     70.64441058011606,
+     69.30572456732725,
+     70.78703804412606,
+     66.15197997901252,
+     69.3276953926062,
+     211.18489328637312,
+     356.7291630943694,
+     331.40014273381155,
+     214.69217729265512,
+     323.57701022723177,
+     358.39829877159195,
+     348.4312789518546,
+     233.37210157468206,
+     207.44220771350476,
+     396.7964666577537
+    ],
+    "disagreement_mean_mev_per_a": [
+     133.6962791132212,
+     140.0545947440317,
+     144.84165180052327,
+     150.26920921393338,
+     151.50835240413295,
+     151.3408983613411,
+     138.85123116911856,
+     137.94295340539026,
+     159.43989198590285,
+     133.3710199468288,
+     178.04727028469387,
+     387.8387102739178,
+     135.8512778542172,
+     95.8211567405233,
+     169.62714741493375,
+     190.75772185510675,
+     147.27349085908153,
+     270.1346781733322,
+     405.2459775505493,
+     99.4394446704025,
+     39.20115418239885,
+     29.278458210541512,
+     35.65468945036927,
+     24.138217510063647,
+     35.01425949581093,
+     26.39525245534817,
+     30.36445524104736,
+     19.473560350546247,
+     92.85146451782113,
+     91.74023510576322,
+     70.24808511110936,
+     69.80983197265425,
+     73.61384665607417,
+     86.04353762758596,
+     92.92418389182296,
+     67.70452755613195,
+     61.448430411325056,
+     97.02164242973151,
+     168.78761348939614,
+     146.2242472889032,
+     137.13511936691165,
+     129.47724637045505,
+     142.46202223440972,
+     136.47990900611495,
+     121.96317364442665,
+     147.4583081111527,
+     208.7346183608166,
+     168.14914304242734,
+     199.142151979066,
+     211.59185093837385,
+     185.1185609534009,
+     194.6500383943225,
+     160.37383473138928,
+     210.50279297814413,
+     203.54850480985516,
+     245.38251891483125
+    ],
+    "disagreement_max_mev_per_a": [
+     211.45056374066326,
+     201.74944311638254,
+     203.84241219933972,
+     243.1524699690515,
+     244.65982712756568,
+     305.73484613566046,
+     248.7945250125649,
+     192.7081558657081,
+     268.5293103650396,
+     190.7853277735432,
+     307.59938887861364,
+     1253.2478775071131,
+     224.45510209294488,
+     150.05883917392964,
+     276.1883493456249,
+     473.9656801818318,
+     278.1362494642633,
+     683.8708776583602,
+     1000.8891574542271,
+     264.6241005968086,
+     87.76064199130657,
+     63.91805759750671,
+     71.77074504938916,
+     38.27748380002551,
+     65.73909566827948,
+     54.534596717923456,
+     48.524242443938206,
+     42.849135923220345,
+     136.20363604103358,
+     145.4448948474934,
+     107.56024033569652,
+     124.75175360413893,
+     126.3657519963042,
+     137.92368482258576,
+     159.2145703332384,
+     110.57568795092507,
+     119.62762100324986,
+     141.61848124145715,
+     325.4044809831993,
+     264.8210484012622,
+     268.5082486648274,
+     263.9261822796356,
+     270.09592619640875,
+     229.14133050576552,
+     230.2940704513954,
+     263.0173058930798,
+     459.2161061545517,
+     328.81589236060864,
+     343.8000916631533,
+     314.3563651488506,
+     341.400460658417,
+     358.0649665745439,
+     302.6062578654319,
+     530.590327828655,
+     383.030582070846,
+     398.0590059784689
+    ],
+    "e_abs_err_mev_per_atom": [
+     8.409986766386268,
+     3.814120353549555,
+     10.589414075056425,
+     11.969040985084334,
+     14.09675778948305,
+     11.14532780487032,
+     1.5873145738378724,
+     6.397429759674722,
+     11.725144082305405,
+     7.044592210379008,
+     45.1044145618571,
+     142.07367292766548,
+     2.0047341321038914,
+     17.180023619447482,
+     67.36564997323136,
+     48.85062978313215,
+     13.367881962798478,
+     170.93180686443964,
+     150.346272401384,
+     4.820960984394773,
+     372.88538012912204,
+     75.25452720101468,
+     289.7319493046414,
+     55.51179990041848,
+     347.5911895686213,
+     8.935659995975803,
+     201.26503152474444,
+     65.54676599691017,
+     11.488690533743906,
+     5.767656556615819,
+     6.843192621156291,
+     5.285650995617175,
+     22.273733893337422,
+     9.055383189531696,
+     8.526599919857603,
+     13.561247327144699,
+     10.665493215981314,
+     2.183090501565843,
+     12.902679137596351,
+     11.419994621018372,
+     8.360337867581316,
+     20.222961203326456,
+     7.918838985651282,
+     9.5126006130394,
+     17.0891616379044,
+     11.058651672445622,
+     16.45701873061256,
+     23.967542655347174,
+     7.511806570773771,
+     31.40147279412453,
+     0.7360452705800213,
+     59.02259272202315,
+     20.533766309061008,
+     27.023469581124004,
+     2.29201058293782,
+     19.393295376024966
+    ],
+    "e_std_mev_per_atom": [
+     21.25434988439628,
+     21.36581750596707,
+     20.196946558241436,
+     18.198400825800377,
+     17.314952048771552,
+     18.03711865638782,
+     20.219089586173197,
+     18.98497102636924,
+     18.0441890429391,
+     23.325848461958362,
+     6.003597172467517,
+     15.140516335230007,
+     10.979638452960586,
+     6.1804740458184195,
+     10.925069597380643,
+     6.647574646532773,
+     10.88101814355128,
+     11.808010025022524,
+     13.744048228585536,
+     7.715854142039169,
+     11.265190473825529,
+     14.586610776679157,
+     8.763358280109276,
+     2.3567274988286306,
+     10.451261897605136,
+     4.1769407891805095,
+     24.08590919270967,
+     2.7142440735441244,
+     6.080914046202854,
+     4.010458734888694,
+     6.791342151952986,
+     5.021889332391909,
+     5.302208896893328,
+     5.163993563746214,
+     4.792353905972127,
+     6.244417969970584,
+     5.306739966553567,
+     1.9471900825809358,
+     4.198773061935,
+     4.811166770823487,
+     6.544935220526405,
+     8.415988877858057,
+     9.3937397835447,
+     5.358091254182198,
+     6.307071958470743,
+     4.547443876397473,
+     10.692192337627489,
+     5.980353924220545,
+     29.983692686825677,
+     8.780515777099374,
+     4.742696966721285,
+     8.292833676324943,
+     1.6565119302254179,
+     15.72608610527703,
+     12.368641508482355,
+     12.450246837521775
+    ]
+   },
+   "oracle_calls": 0,
+   "strategy": "random",
+   "seed": 0,
+   "wall_seconds": 175.88105820002966
+  }
+ ],
+ "wall_seconds": 366.39104580000276
+}
