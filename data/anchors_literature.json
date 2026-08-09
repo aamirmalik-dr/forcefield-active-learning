@@ -1,0 +1,28 @@
+{
+  "source": "literature fallback (used only when no MP_API_KEY is configured)",
+  "note": "DFT reference values for BCC Ti, Zr, Nb as reported on the public Materials Project pages for mp-73, mp-41, mp-75 (database release 2025; CC BY 4.0). The conventional BCC lattice constant is recovered from the reported volume per atom.",
+  "citations": [
+    "A. Jain et al., Commentary: The Materials Project, APL Materials 1, 011002 (2013), DOI 10.1063/1.4812323",
+    "Materials Project entries mp-73 (Ti, Im-3m), mp-41 (Zr, Im-3m), mp-75 (Nb, Im-3m), https://next-gen.materialsproject.org"
+  ],
+  "entries": {
+    "Ti": {
+      "material_id": "mp-73",
+      "a0_bcc_a": 3.252,
+      "b0_gpa": 111.0,
+      "spacegroup": "Im-3m"
+    },
+    "Zr": {
+      "material_id": "mp-41",
+      "a0_bcc_a": 3.582,
+      "b0_gpa": 88.0,
+      "spacegroup": "Im-3m"
+    },
+    "Nb": {
+      "material_id": "mp-75",
+      "a0_bcc_a": 3.318,
+      "b0_gpa": 172.0,
+      "spacegroup": "Im-3m"
+    }
+  }
+}

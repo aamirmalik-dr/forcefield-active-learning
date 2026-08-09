@@ -1,0 +1,26 @@
+{
+  "teacher": {
+    "package": "chgnet",
+    "version": "0.4.2",
+    "checkpoint": "CHGNet v0.3.0 (default pretrained weights, MPtrj-trained)",
+    "license": "BSD-3-Clause (code and pretrained weights)"
+  },
+  "label_kind": "surrogate model labels from a pretrained universal potential, not DFT",
+  "n_frames": 1488,
+  "n_groups": 112,
+  "compositions": [
+    "Nb",
+    "Ti",
+    "Ti2ZrNb",
+    "TiNb",
+    "TiZr",
+    "TiZrNb",
+    "TiZrNb2",
+    "Zr",
+    "ZrNb"
+  ],
+  "atoms_min": 16,
+  "atoms_max": 54,
+  "seconds_per_frame": 0.0864,
+  "seed": 20260809
+}

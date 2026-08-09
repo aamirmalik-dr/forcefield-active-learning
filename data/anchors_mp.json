@@ -1,0 +1,27 @@
+{
+  "source": "Materials Project API (CC BY 4.0)",
+  "note": "DFT (GGA/GGA+U workflow) reference values for BCC phases",
+  "entries": {
+    "Ti": {
+      "material_id": "mp-73",
+      "a0_bcc_a": 3.2516,
+      "volume_per_atom_a3": 17.19,
+      "spacegroup": "Im-3m",
+      "b0_gpa": 111.049
+    },
+    "Zr": {
+      "material_id": "mp-41",
+      "a0_bcc_a": 3.5817,
+      "volume_per_atom_a3": 22.9739,
+      "spacegroup": "Im-3m",
+      "b0_gpa": 88.4
+    },
+    "Nb": {
+      "material_id": "mp-75",
+      "a0_bcc_a": 3.3176,
+      "volume_per_atom_a3": 18.2581,
+      "spacegroup": "Im-3m",
+      "b0_gpa": 172.05
+    }
+  }
+}
