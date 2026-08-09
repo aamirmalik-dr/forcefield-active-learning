@@ -1,0 +1,28 @@
+# Capacity ceiling: the identical committee trained on the ENTIRE pool
+# (all labels purchased up front, no acquisition rounds). If the ceiling
+# sits near the 300-label plateau, the loop is capacity-bound and no
+# selection strategy can beat random by much; the curves are read against
+# this line.
+name: ceiling
+kind: al
+dataset: data/full/dataset.extxyz
+seeds: [0]
+strategies: [random]
+n_members: 5
+hidden: [16, 16]
+n_init: 1056
+round_size: 0
+n_rounds: 0
+chunk_size: 48
+train:
+  epochs: 40
+  batch_size: 16
+  lr: 3.0e-3
+  force_weight: 0.1
+  target_frame_epochs: 12000
+  max_epochs: 120
+split:
+  holdout_compositions: [Ti2ZrNb, TiZrNb2]
+  test_fraction: 0.2
+  seed: 20260809
+out: results/ceiling.json

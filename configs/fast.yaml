@@ -1,0 +1,25 @@
+# Offline demo: a micro active-versus-random loop on the committed labeled
+# sample. Runs in a few minutes on CPU with no teacher and no download.
+name: fast
+kind: al
+dataset: data/sample_frames.extxyz
+seeds: [0]
+strategies: [committee, random]
+n_members: 3
+hidden: [8]
+n_init: 24
+round_size: 12
+n_rounds: 3
+chunk_size: 48
+train:
+  epochs: 25
+  batch_size: 12
+  lr: 3.0e-3
+  force_weight: 0.1
+  target_frame_epochs: 4000
+  max_epochs: 100
+split:
+  holdout_compositions: [Ti2ZrNb, TiZrNb2]
+  test_fraction: 0.2
+  seed: 20260809
+out: results/fast_demo.json

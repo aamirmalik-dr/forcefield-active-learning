@@ -1,0 +1,32 @@
+# Main benchmark: pure committee acquisition, capped (diversity-aware)
+# committee acquisition, and random selection, 3 seeds each, fixed budget
+# schedule 60 + 6 x 40 = 300 labels.
+name: main
+kind: al
+dataset: data/full/dataset.extxyz
+seeds: [0, 1, 2]
+strategies: [committee, committee_capped, random]
+group_cap: 4
+n_members: 5
+hidden: [16, 16]
+n_init: 60
+round_size: 40
+n_rounds: 6
+chunk_size: 48
+train:
+  epochs: 40
+  batch_size: 16
+  lr: 3.0e-3
+  force_weight: 0.1
+  # equal-effort rule: small purchased sets get more epochs so every round
+  # trains with comparable optimizer steps (min(120, max(40, 12000/n)))
+  target_frame_epochs: 12000
+  max_epochs: 120
+split:
+  holdout_compositions: [Ti2ZrNb, TiZrNb2]
+  test_fraction: 0.2
+  seed: 20260809
+sibling_test:
+  n_per_group: 2
+save_committee: models/committee_active.pt
+out: results/main.json

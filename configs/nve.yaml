@@ -1,0 +1,12 @@
+# NVE energy-drift stability check of the committed active committee.
+name: nve
+kind: nve
+committee: models/committee_active.pt
+composition: TiZrNb
+reps: 2
+temperatures_k: [300.0, 900.0]
+n_steps: 1500
+dt_fs: 2.0
+sample_every: 10
+seed: 0
+out: results/nve.json

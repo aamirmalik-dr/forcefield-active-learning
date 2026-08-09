@@ -1,0 +1,37 @@
+# Scarce-pool benchmark: the regime where selection should matter. The pool
+# keeps every easy group (rattle04, rattle08) but only 2 generation groups
+# of each hard kind, so informative frames are rare and a random buyer
+# mostly purchases redundant easy frames. Test set and training identical
+# to main.yaml; 2 seeds (stated in RESULTS).
+name: scarce
+kind: al
+dataset: data/full/dataset.extxyz
+seeds: [0, 1]
+strategies: [committee, random]
+n_members: 5
+hidden: [16, 16]
+n_init: 60
+round_size: 40
+n_rounds: 6
+chunk_size: 48
+group_cap: 4
+train:
+  epochs: 40
+  batch_size: 16
+  lr: 3.0e-3
+  force_weight: 0.1
+  target_frame_epochs: 12000
+  max_epochs: 120
+split:
+  holdout_compositions: [Ti2ZrNb, TiZrNb2]
+  test_fraction: 0.2
+  seed: 20260809
+pool_max_groups_per_kind:
+  rattle14: 2
+  rattle20: 2
+  rattle28: 2
+  strain_vol: 2
+  strain_shear: 2
+sibling_test:
+  n_per_group: 2
+out: results/scarce.json

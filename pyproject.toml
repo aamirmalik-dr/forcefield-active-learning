@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "falearn"
+version = "0.1.0"
+description = "Query-by-committee active learning for machine-learning interatomic potentials on BCC TiZrNb: a from-scratch deep ensemble, a label-budget benchmark against random selection, and an uncertainty-calibration analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Aamir Malik" }]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "torch>=2.0",
+    "ase>=3.22",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+teacher = ["chgnet>=0.3"]
+mp = ["mp-api>=0.41"]
+dev = [
+    "pytest>=7.0",
+    "ruff==0.16.2",
+    "black==26.5.1",
+    "nbclient>=0.9",
+    "nbformat>=5.9",
+    "ipykernel>=6.25",
+]
+
+[project.scripts]
+falearn = "falearn.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+# notebook cell sources are string literals; cell lines may exceed the limit
+"scripts/build_notebook.py" = ["E501"]
+# tutorial cells use the compact plotting idiom and long labels; real code
+# smells (unused imports, import order) still apply
+"notebooks/*.ipynb" = ["E501", "E702"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

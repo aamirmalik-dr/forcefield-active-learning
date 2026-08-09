@@ -1,0 +1,38 @@
+# Ensemble-driven MD exploration variant: each round the committee mean
+# runs short Langevin trajectories whose snapshots join the candidate pool;
+# purchasing one costs a real teacher call through the oracle. Reduced to
+# one seed (stated in RESULTS); compare against the same seed in main.json.
+name: md_explore
+kind: al
+dataset: data/full/dataset.extxyz
+teacher: chgnet
+seeds: [0]
+strategies: [committee]
+n_members: 5
+hidden: [16, 16]
+n_init: 60
+round_size: 40
+n_rounds: 6
+chunk_size: 48
+train:
+  epochs: 40
+  batch_size: 16
+  lr: 3.0e-3
+  force_weight: 0.1
+  target_frame_epochs: 12000
+  max_epochs: 120
+split:
+  holdout_compositions: [Ti2ZrNb, TiZrNb2]
+  test_fraction: 0.2
+  seed: 20260809
+sibling_test:
+  n_per_group: 2
+explore:
+  compositions: [Ti, Zr, Nb, TiZr, TiNb, ZrNb, TiZrNb]
+  temperature_k: 1200.0
+  n_steps: 120
+  sample_every: 30
+  trajectories_per_comp: 1
+  reps: 2
+save_committee: models/committee_md_explore.pt
+out: results/md_explore.json

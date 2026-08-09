@@ -1,0 +1,18 @@
+# EOS physics check: the acquisition-biased active committee against the
+# random-reference committee at the identical budget, the teacher scan, and
+# the real-DFT Materials Project anchors (literature fallback).
+name: eos
+kind: eos
+committees:
+  active: models/committee_active.pt
+  random: models/committee_random.pt
+teacher: chgnet
+teacher_scan: true
+anchors_mp: data/anchors_mp.json
+anchors_literature: data/anchors_literature.json
+compositions: [Ti, Zr, Nb]
+reps: 2
+n_points: 13
+span: 0.06
+seed: 0
+out: results/eos.json
