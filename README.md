@@ -70,7 +70,7 @@ the machine-readable one).
    label value is shallow and compresses every selection effect.
 6. **The split-protocol exhibit flips the conclusion:** evaluated on leaky
    sibling frames instead of held-out groups, the committee appears to beat
-   random by 16 percent (113-115 vs 134 meV/A). The honest split says the
+   random by 14 to 16 percent (113-115 vs 134 meV/A). The honest split says the
    opposite. This is the strongest argument in the repository for
    provenance-aware evaluation of potentials.
 7. **Ensemble-MD exploration changed little** (1 seed): the committee bought
@@ -136,6 +136,11 @@ Full reproduction (installs nothing extra except the teacher):
 pip install -e ".[teacher,mp]"
 python scripts/run_all.py        # ~6 h on a desktop CPU (timings in RESULTS.md)
 ```
+
+The teacher speed test (scripts/choose_teacher.py) times MACE-MP-0 small as
+the alternative teacher only if mace-torch is installed (`pip install
+mace-torch`); without it the script records the CHGNet timing alone and the
+pipeline proceeds unchanged.
 
 Tests and lint:
 
