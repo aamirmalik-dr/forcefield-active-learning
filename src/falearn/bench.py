@@ -156,8 +156,6 @@ def run_al_benchmark(cfg: dict, oracle=None, save_committee_to: str | None = Non
                     n_per_group=int(sib_cfg.get("n_per_group", 2)),
                     seed=int(seed),
                 )
-                # exploration candidates carry no stored labels; keep only
-                # original pool frames (they all have labels in the harness)
                 sib_frames = [pool_frames[k] for k in sib_local if k < len(pool_frames)]
                 sib_frames = [fr for fr in sib_frames if fr.energy is not None]
                 if sib_frames:

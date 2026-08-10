@@ -224,8 +224,13 @@ def _explore_md(
     settings: LoopSettings,
     acsf: AcsfParams,
     round_index: int,
-) -> None:
-    """Add ensemble-MD snapshot candidates to the pool (teacher-free)."""
+) -> dict:
+    """Add ensemble-MD snapshot candidates to the pool (teacher-free).
+
+    Returns:
+        Dict with the number of snapshots added and dropped by the
+        overlap filter, recorded in the round history.
+    """
     from falearn.md import langevin_snapshots
     from falearn.neighbors import neighbor_pairs
     from falearn.structures import bcc_supercell
