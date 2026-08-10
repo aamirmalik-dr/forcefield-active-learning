@@ -42,7 +42,7 @@ variant ever gets down to random's final error within the budget
 (results/metrics.json, label_reduction). The energy gap is the striking
 one: a factor of 1.56 in favor of buying labels blindly.
 
-![error versus labels and acquisition map](figures/hero.png)
+![error versus labels and acquisition map](results/figures/hero.png)
 
 ## Why: the acquisition map and the per-kind breakdown
 
@@ -54,7 +54,7 @@ The pool is roughly uniform over kinds; the purchases are not.
 The per-kind breakdown shows the committee got exactly what it paid for,
 and it still was not enough:
 
-![final error by batch kind](figures/error_by_kind.png)
+![final error by batch kind](results/figures/error_by_kind.png)
 
 - On the kinds it bought (rattle 0.28, rattle 0.20) the committee beats
   random, e.g. about 1,270 versus 1,430 meV/A RMSE on rattle-0.28 test
@@ -72,8 +72,9 @@ against a 15 percent pool share while starving the elementals (Ti gets 6
 percent of purchases against 14, Zr 7 against 16). Remember that number
 when reading the equation-of-state section: the active committee barely
 bought elemental frames. The mean disagreement of what gets bought falls
-about 6x from round 1 to round 6 as the pool's hard tail is consumed
-(figures/acquisition_map.png).
+about 6x from round 1 to round 6 as the pool's hard tail is consumed:
+
+![purchases by composition and disagreement of purchases per round](results/figures/acquisition_map.png)
 
 ## The capacity ceiling compresses everything
 
@@ -93,12 +94,12 @@ exactly that regime.
 Query-by-committee did not fail because the uncertainty was wrong. On
 held-out test frames, per-frame committee force disagreement ranks actual
 force error with Spearman rho 0.87 to 0.91 across all six committee runs
-(figures/calibration.png; results/metrics.json, calibration). The bin-mean
+(results/figures/calibration.png; results/metrics.json, calibration). The bin-mean
 curve also shows the committee is systematically overconfident: actual
 errors run about 2x the raw disagreement, so the signal is a ranking, not
 an error bar.
 
-![calibration](figures/calibration.png)
+![calibration](results/figures/calibration.png)
 
 A well-calibrated ranking can still buy the wrong data: the frames with the
 highest error are self-similar high-amplitude configurations whose labels
@@ -113,7 +114,7 @@ generation groups of each hard kind (configs/scarce.yaml, 2 seeds,
 results/scarce.json). Now a random buyer wastes most of its budget on
 redundant near-equilibrium frames, and committee disagreement pays off:
 
-![scarce-pool curves](figures/scarce.png)
+![scarce-pool curves](results/figures/scarce.png)
 
 - The committee reaches random's final-budget force error with about
   **2.2x fewer labels** (139 versus 300; energy 1.7x), the label-reduction
@@ -149,11 +150,12 @@ The leaky protocol flatters everyone, but it flatters the committee more
 (it trained on the hard groups the sibling set samples), so it does not
 just shrink errors by roughly 40 percent, it **reverses the ranking**: a
 random-frame evaluation would have reported committee acquisition beating
-random by 16 percent, the opposite of the honest conclusion. This is the
+random by 14 to 16 percent depending on the variant, the opposite of the
+honest conclusion. This is the
 one place this repository evaluates on leaky data, and it exists to make
 that failure mode visible.
 
-![split protocol](figures/split_protocol.png)
+![split protocol](results/figures/split_protocol.png)
 
 ## Ensemble-MD exploration: mostly declined by its own committee
 
@@ -169,7 +171,7 @@ On-policy exploration neither helped nor hurt here; the fixed pool already
 contains harder frames than 1200 K committee-MD generates
 (results/md_explore.json).
 
-![md exploration](figures/md_explore.png)
+![md exploration](results/figures/md_explore.png)
 
 ## Physics checks: acquisition bias reaches the equation of state
 
@@ -187,7 +189,7 @@ and the real-DFT Materials Project anchors:
 | **Zr** active / random / teacher / DFT | 3.635 / 3.640 / 3.595 / 3.582 | 111 / 55 / 89 / 88 |
 
 Nb is the clean verdict: the random-fed committee reproduces the teacher's
-equation of state almost exactly (a0 within 0.011 A, B0 within 10 GPa),
+equation of state almost exactly (a0 within 0.011 A, B0 within 10.3 GPa),
 while the active committee, which spent its budget on far-from-equilibrium
 and mostly non-elemental frames (the acquisition map above), misses the
 lattice constant by 0.13 A and collapses the bulk modulus to a third of
@@ -195,7 +197,7 @@ its value. Same architecture, same budget, same
 training; only the purchase policy differs. Acquisition bias is not just a
 test-set number, it is broken curvature where the potential was not fed.
 
-![equation of state](figures/eos.png)
+![equation of state](results/figures/eos.png)
 
 Honest footnotes: Ti B0 is wrong against DFT for every model including the
 teacher (74 vs 111 GPa), the teacher's known miss, inherited. Zr is
@@ -210,7 +212,7 @@ drift -0.0003 meV/atom/ps from 300 K and -0.0001 from 900 K. Whatever else
 is wrong with the active committee, its forces are exact derivatives of a
 smooth energy.
 
-![NVE drift](figures/nve.png)
+![NVE drift](results/figures/nve.png)
 
 ## Timings and scale
 
