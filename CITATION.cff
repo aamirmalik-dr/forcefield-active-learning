@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code, data, or benchmark results, please cite the repository."
+title: "forcefield-active-learning: query-by-committee active learning for TiZrNb machine-learning interatomic potentials"
+type: software
+authors:
+  - family-names: Malik
+    given-names: Aamir
+version: 0.1.0
+date-released: "2026-08-10"
+license: MIT
+repository-code: "https://github.com/aamirmalik-dr/forcefield-active-learning"
+keywords:
+  - active learning
+  - query by committee
+  - deep ensemble
+  - machine-learning interatomic potential
+  - uncertainty calibration
+  - TiZrNb
