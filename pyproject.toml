@@ -10,6 +10,19 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "Aamir Malik" }]
+keywords = ["active learning", "query by committee", "deep ensemble", "machine-learning interatomic potential", "uncertainty calibration", "TiZrNb", "refractory alloy", "PyTorch"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
 dependencies = [
     "numpy>=1.24",
     "scipy>=1.10",
@@ -30,6 +43,11 @@ dev = [
     "nbformat>=5.9",
     "ipykernel>=6.25",
 ]
+
+[project.urls]
+Repository = "https://github.com/aamirmalik-dr/forcefield-active-learning"
+Issues = "https://github.com/aamirmalik-dr/forcefield-active-learning/issues"
+Results = "https://github.com/aamirmalik-dr/forcefield-active-learning/blob/main/RESULTS.md"
 
 [project.scripts]
 falearn = "falearn.cli:main"
