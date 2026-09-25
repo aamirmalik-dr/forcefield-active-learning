@@ -1,5 +1,7 @@
 # forcefield-active-learning
 
+[![ci](https://github.com/aamirmalik-dr/forcefield-active-learning/actions/workflows/ci.yml/badge.svg)](https://github.com/aamirmalik-dr/forcefield-active-learning/actions/workflows/ci.yml)
+
 A machine-learned interatomic potential is only as good as its training set,
 and every training label costs a reference calculation. This project asks
 the question that decides whether active learning belongs in a potential
@@ -183,6 +185,15 @@ examples/           offline scoring and selection walkthrough
   timing, and file IO only; none of their code is vendored.
 - This repo is self-contained and imports nothing from its sibling TiZrNb
   repositories.
+
+## Related repositories
+
+This repository is one of four on machine-learned interatomic potentials for BCC TiZrNb. Each is standalone, imports nothing from the others, and can be cloned and run on its own. The four share the teacher choice and the split discipline (held-out generation groups and compositions) so that their numbers can be read side by side.
+
+- [mlip-descriptor-potential](https://github.com/aamirmalik-dr/mlip-descriptor-potential): Behler-Parrinello descriptor potential for BCC TiZrNb, benchmarked against tuned linear and pair-potential baselines.
+- [graph-neural-forcefield](https://github.com/aamirmalik-dr/graph-neural-forcefield): message-passing potential for BCC TiZrNb, benchmarked head to head against the descriptor approach at matched data and budget.
+- [alloy-mlip-bench](https://github.com/aamirmalik-dr/alloy-mlip-bench): the potentials deployed as ASE calculators and benchmarked property by property against pretrained foundation potentials.
+- [pd-hydrogen-diffusion-dft](https://github.com/aamirmalik-dr/pd-hydrogen-diffusion-dft): a full density-functional calculation with CP-PAW, hydrogen diffusion in fcc palladium, the kind of reference calculation the TiZrNb repositories stand in for with surrogate labels.
 
 ## Author
 
