@@ -16,7 +16,7 @@ from falearn.model import MemberPotential, load_members, save_members
 from falearn.pool import LabeledPool
 from falearn.training import TrainSettings
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = [
     "AcsfParams",
